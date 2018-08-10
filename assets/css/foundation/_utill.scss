@@ -1,0 +1,56 @@
+//SP PC
+.u-sp {
+  @media screen and (min-width: 769px) {
+    display: none !important;
+  }
+}
+.u-pc {
+  @media screen and (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+//MAX
+.u-md-sm {
+  @media screen and (max-width: 554px) {
+    display: none !important;
+  }
+}
+.u-md-max {
+  @media screen and (max-width: 769px) {
+    display: none !important;
+  }
+}
+.u-lg-max {
+  @media screen and (max-width: 992px) {
+    display: none !important;
+  }
+}
+.u-xl-max {
+  @media screen and (max-width: 1200px) {
+    display: none !important;
+  }
+}
+
+
+//MIN
+.u-sm {
+  @include media(sm) {
+    display: none !important;
+  }
+}
+.u-md {
+  @include media(md) {
+    display: none !important;
+  }
+}
+.u-lg {
+  @include media(lg) {
+    display: none !important;
+  }
+}
+.u-xl {
+  @include media(xl) {
+    display: none !important;
+  }
+}

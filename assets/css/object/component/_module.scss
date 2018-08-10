@@ -1,0 +1,318 @@
+/*----------------------------------------------------
+  common
+----------------------------------------------------*/
+.c-en {
+  font-family: 'lato', sans-serif;
+}
+
+/*----------------------------------------------------
+  column
+----------------------------------------------------*/
+.c-container {
+  width: 100%;
+  padding: 0 5%;
+  @include media(lg) {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+/*----------------------------------------------------
+  list
+----------------------------------------------------*/
+.c-property-list {
+  ul {
+
+    }
+    li {
+    }
+}
+
+/*----------------------------------------------------
+  heading
+----------------------------------------------------*/
+.c-section-title {
+  margin: 60px auto 20px;
+  @include media(lg) {
+    margin: 80px auto 30px;
+  }
+  .heading {
+    @include fontsize(20);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+    @include media(md) {
+      font-size: 24px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      margin: 10px auto 0;
+      width: 30px;
+      height: 3px;
+      background: $color-main;
+      @include media(lg) {
+        margin: 20px auto 0;
+      }
+    }
+  }
+  .lead {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    color: #999;
+    padding: 0 5%;
+    @include media(lg) {
+      padding: 0;
+    }
+    span.sarch-fit {
+      color: $color-main;
+    }
+  }
+  &.title_type_left {
+    .heading {
+      @include media(lg) {
+        text-align: left;
+        &:after {
+          margin: 20px auto 0 0;
+        }
+      }
+    }
+  }
+}
+.c-block-title {
+  margin-bottom: 20px;
+  padding: 14px 0;
+  @include fontsize(16);
+  background: $color-sub;
+  text-align: center;
+  @include media(lg) {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+.c-page-title {
+  padding: 40px 0 20px;
+  background: #e4f4ff;
+  @include media(md) {
+    padding: 60px 0 40px;
+  }
+  .heading {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $color-main;
+    @include media(md) {
+      font-size: 24px;
+    }
+  }
+  .time {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+/*----------------------------------------------------
+  button
+----------------------------------------------------*/
+.c-button {
+  a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: .24s ease all;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+    }
+    &:before {
+      font-family: FontAwesome;
+    }
+  }
+  &.button-more {
+    a {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        right: 5%;
+        top: 40%;
+        height: 6px;
+        width: 6px;
+        border-right: 1px solid #fff;
+        border-top: 1px solid #fff;
+        transform: rotate(45deg);
+      }
+      &:hover {
+        &:after {
+          border-color: $color-main;
+        }
+      }
+    }
+  }
+  &.button-type-list {
+    width: 100%;
+    margin: 0 auto;
+    @include media(sm) {
+      width: 320px;
+    }
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 14px 0;
+      font-weight: bold;
+      color: $color-main;
+      border: 1px solid $color-main;
+      &:after {
+        position: absolute;
+        content: '';
+        right: 5%;
+        top: 42%;
+        height: 6px;
+        width: 6px;
+        border-right: 1px solid $color-main;
+        border-top: 1px solid $color-main;
+        transform: rotate(45deg);
+      }
+      &:hover {
+        color: #fff;
+        background: $color-main;
+        &:after {
+          border-color: #fff;
+        }
+      }
+    }
+  }
+  &.button-color-blue {
+    a {
+      width: 100%;
+      color: #fff;
+      border: 2px solid $color-main;
+      background: $color-main;
+      &:hover {
+        background: #fff;
+        color: $color-main;
+      }
+    }
+  }
+  &.button-pen {
+    a {
+      &:before {
+        content: '\f040';
+        margin-right: 6px;
+        font-family: FontAwesome;
+      }
+    }
+  }
+  &.button-search {
+    a {
+      &:before {
+        content: '\f002';
+        margin-right: 6px;
+        font-family: FontAwesome;
+      }
+    }
+  }
+}
+/*----------------------------------------------------
+  text
+----------------------------------------------------*/
+.c-text {
+  line-height: normal;
+//  @include media(TB-min) {
+//  line-height: 1.8em;
+//  @include fontsize(14)
+//  }
+//  @include media(LT-min) {
+//    @include fontsize(16)
+//  }
+}
+
+
+/*----------------------------------------------------
+table
+----------------------------------------------------*/
+.c-table {
+  table {
+    tr {
+      border-bottom: 1px solid #dcdcdc;
+      &:first-child {
+        border-top: 1px solid #dcdcdc;
+      }
+      th,td {
+        padding: 1.4em .8em;
+      }
+      th {
+        width: 25%;
+        background-color: #f6f6f6;
+        border-right: 1px solid #dcdcdc;
+      }
+      td {
+        width: 75%;
+        line-height: 1.6;
+        .heading {
+          margin: 15px 0 4px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}
+
+/*----------------------------------------------------
+  pagetop
+----------------------------------------------------*/
+.c-pagetop {
+  position: relative;
+  padding: 20px 0;
+  border: 1px solid $color-main;
+  background: $color-main;
+  font-family: $lato;
+  letter-spacing: .1em;
+  text-align: center;
+  color: #fff;
+  transition: .24s ease all;
+  @include media(md) {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    right: 5%;
+    bottom: 5%;
+    border-radius: 50%;
+    font-size: 0;
+    z-index: 20;
+  }
+  &:hover {
+    @include media(md) {
+      background: #fff;
+      &:after {
+        border-color: $color-main;
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    right: 5%;
+    top: 56%;
+    height: 8px;
+    width: 8px;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    @include media(md) {
+      height: 14px;
+      width: 14px;
+      top: 56%;
+      right: 24%;
+      border-right: 2px solid #fff;
+      border-top: 2px solid #fff;
+    }
+  }
+}

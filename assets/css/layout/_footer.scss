@@ -1,0 +1,203 @@
+/* footer
+   ----------------------------------------------------------------- */
+.footer {
+  margin-top: 60px;
+  background: #EAEAE8;
+  @include media(md) {
+    margin-top: 100px;
+  }
+  .footer-inner {
+    padding: 40px 5%;
+    @include media(md) {
+      padding: 40px 0;
+    }
+    .footer-nav {
+      .heading {
+        margin-bottom: 14px;
+        font-size: 16px;
+        letter-spacing: .05em;
+        font-weight: normal;
+        span {
+          margin-left: 10px;
+          font-family: $lato;
+          font-size: 12px;
+          color: $color-main;
+        }
+      }
+      .area {
+        @include media(md) {
+          .area-item {
+            display: inline-block;
+            width: 30%;
+            margin-right: 5%;
+            &:last-child {
+              margin-right: 0;
+            }
+          } 
+        }
+      }
+      .work,
+      .pickup,
+      .feature,
+      .about,
+      .menu {
+        @include media(md) {
+          .work-item,
+          .pickup-item,
+          .feature-item,
+          .about-item,
+          .menu-item {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            @include media(md) {
+              &:after {
+                content: '';
+                width: 30%;
+                height: 0;
+              }
+            }
+            ul {
+              @include media(md) {
+                width: 30%;
+              }
+            }
+          } 
+        }
+      }
+      .footer-nav-list {
+        .name {
+          margin: 40px 0 12px;
+          font-size: 13px;
+          color: #808080;
+          letter-spacing: .05em;
+        }
+        .heading {
+          margin: 50px 0 12px;
+        }
+        .title {
+          display: block;
+          position: relative;
+          padding: 12px 10px;
+          border-bottom: 1px solid #555;
+          color: #333;
+        }
+        .footer-nav-list__item {
+          li {
+            a {
+              position: relative;
+              padding: 12px 10px;
+              display: block;
+              border-bottom: 1px solid #555;
+              color: #333;
+              transition: .24s ease all;
+              &:hover {
+                @include media(md) {
+                  color: $color-main;
+                  border-color: $color-main;
+                  &:before {
+                    right: 0;
+                    border-color: $color-main;
+                  }
+                }
+              }
+              &:before {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-right: 1px solid #555;
+                border-bottom: 1px solid #555;
+                top: 42%;
+                right: 5%;
+                transform: rotate(-45deg);
+                transition: .24s ease all;
+              }
+            }
+          }
+          &.item-col2 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            li {
+              width: 48%;
+            }
+          }
+        }
+      }
+    }
+    .footer-information {
+      margin: 40px 0 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #999;
+      @include media(md) {
+        display: flex;
+        margin: 80px 0 40px;
+        padding-bottom: 60px;
+      }
+      .information-link {
+        @include media(md) {
+          width: 340px;
+        }
+      }
+      .information-text {
+        margin: 30px 0 0;
+        @include media(md) {
+          margin: 0 0 0 30px;
+        }
+        .subscript {
+          font-weight: bold;
+        }
+        .call {
+          margin: 6px 0 8px;
+          font-family: $lato;
+          font-size: 30px;
+          letter-spacing: .1em;
+          @include media(sm) {
+            display: inline-block;
+            letter-spacing: .05em;
+          }
+          a {
+            font-weight: bold;
+            color: $color-main;
+            &:before {
+              content: '\f095';
+              margin-right: 6px;
+              font-family: FontAwesome;
+            }
+          }
+        }
+        .time {
+          font-size: 12px;
+          @include media(sm) {
+            display: inline-block;
+          }
+        }
+        .adress {
+          margin-top: 20px;
+          line-height: 1.6;
+          @include media(sm) {
+            margin-top: 0;
+            br {
+              display: none;
+            }
+            span {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .footer-copyright {
+      text-align: center;
+      .logo {
+        width: 180px;
+        margin: 0 auto;
+      }
+      .copyright {
+        margin-top: 15px;
+        font-size: 10px;
+      }
+    }
+  }
+}
