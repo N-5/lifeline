@@ -16,6 +16,7 @@
   if ( function_exists( 'add_image_size' ) ) {
   	add_image_size( 'custom_size',134,134, true );
   	add_image_size( 'custom_size_detail', 300, 300, true );
+	 add_image_size( 'blog_thumb', 240, 148, true );
   }
 
   // wp_titleの半角除去
@@ -36,6 +37,7 @@
   // AIOSEO <link rel="prev/next">削除
   add_filter('aioseop_prev_link', '__return_empty_string' );
   add_filter('aioseop_next_link', '__return_empty_string' );
+
 
 
   // カスタム投稿の管理画面ページ日付順ソート

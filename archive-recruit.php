@@ -3,7 +3,7 @@
   <div id="recruitArchive" class="main">
     <div class="c-headingLarge">
       <h2 class="heading">求人情報</h2>
-      <p class="text">ダミーです。今一押しの人気求人を集めました。おすすめ求人リストの本文が入ります。</p>
+      <p class="text">正社員で働きたい人にオススメの優良正社員求人を多数掲載。<br>地域や業種、職種、活かせるスキルや働き方の特徴から正社員の求人をさがすことができます。</p>
     </div>
     <div class="c-container">
       <div class="c-recruitList">

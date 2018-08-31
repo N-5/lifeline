@@ -1,6 +1,12 @@
 /* main
    ----------------------------------------------------------------- */
 main {
+//  padding-top: 60px;
+  @include media(lg) {
+    padding-top: 0;
+  }
+}
+#index {
   padding-top: 60px;
   @include media(lg) {
     padding-top: 0;

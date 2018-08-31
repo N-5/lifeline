@@ -8,10 +8,23 @@
             <header>
               <div class="entry__heading c-page-title">
                 <div class="c-container">
-                  <time class="time">掲載日：<?php the_time('Y年m月d日'); ?></time>
+                  <time class="time">掲載日：<?php the_time('Y年m月d日'); ?>　掲載ナンバー：<?php echo the_field('recruit_info01');?></time>
                   <h1 class="heading"><?php the_title(); ?></h1>
                   <div class="entry__category">
                     <ul>
+                      <?php
+                      $custom_post_tag = 'cat_recruit_way';
+                      $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
+                      if(!empty($custom_post_tag_terms)){
+                        if(!is_wp_error( $custom_post_tag_terms )){
+                          foreach($custom_post_tag_terms as $term){
+                            $tag_term_link = get_term_link($term->slug, $custom_post_tag);
+                            $tag_term_name = $term->name;
+                            echo '<li class="is-way"><a href="'.$tag_term_link.'">'.$tag_term_name.'</a></li>';
+                          }
+                        }
+                      }
+                      ?>
                       <?php
                       $custom_post_tag = 'cat_recruit';
                       $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
@@ -150,13 +163,14 @@
             </div>
           </article>
         <?php endwhile; ?>
+        <div class="recruitSingle_btnArea c-btnArea">
+          <div class="c-container">
+            <?php get_template_part('components/c-btnArea'); ?>
+          </div>
+        </div>
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit">求人情報一覧</a></div>
       </div>
-      <div class="recruitSingle_btnArea c-btnArea">
-        <div class="c-container">
-          <?php get_template_part('components/c-btnArea'); ?>
-        </div>
-      </div>
+      
       <div class="recruitSignle_related">
         <p class="sub">＼ 他にもおすすめ求人多数！ ／</p>
         <h4 class="title">この求人を見た人は<br>こちらの求人もおすすめです</h4>

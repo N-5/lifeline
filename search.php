@@ -70,7 +70,7 @@
             <?php if($post_job){ ?><?php echo $post_job; ?><?php } ?>
             <?php if($post_tag){ ?><?php echo $post_tag; ?><?php } ?>
             </h2>
-          <p class="lead"><span class="sarch-fit"><?php echo $postQuery->found_posts; ?>件ヒットしました</span></p>
+          <p class="lead"><span class="sarch-fit">検索結果　<?php echo $postQuery->found_posts; ?>件</span></p>
         </div>
         <div class="search-content">
             <div class="c-recruitList">
@@ -127,8 +127,6 @@
           <!-- /pagenavi -->
         </div><!-- /.search-content -->
       </div><!-- /.main -->
-
-
     </section>
   </div>
 </main>

@@ -18,6 +18,7 @@
         <option value="石川県その他">石川県その他</option>
         <option value="fukuishi">福井市</option>
         <option value="sakai">坂井市</option>
+        <option value="awar">あわら市</option>
         <option value="sabae">鯖江市</option>
         <option value="echizen">越前市</option>
         <option value="福井県その他">福井県その他</option>
@@ -41,9 +42,9 @@
         <option value="その他オフィスワーク">その他オフィスワーク</option>
         <option value="設計・施工管理（建築・土木）">設計・施工管理（建築・土木）</option>
         <option value="開発・設計（電機・機械）">開発・設計（電気・機械）</option>
-        <option value="生産管理・品質管理">生産管理・品質管理</option>
-        <option value="クリエイティブ">クリエイティブ</option>
-        <option value="ドライバー">ドライバー</option>
+        <option value="生産管理・品質管理・生産技術">生産管理・品質管理・生産技術</option>
+        <option value="クリエイティブ・デザイナー">クリエイティブ・デザイナー</option>
+        <option value="it系（se・pg）">IT系（SE・PG）</option>
         <option value="その他">その他</option>
       </select>
     </div>

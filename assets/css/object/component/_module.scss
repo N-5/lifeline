@@ -249,6 +249,7 @@ table
       }
       th {
         width: 25%;
+        vertical-align: top;
         background-color: #f6f6f6;
         border-right: 1px solid #dcdcdc;
       }
@@ -258,11 +259,13 @@ table
         .heading {
           margin: 15px 0 4px;
           font-weight: bold;
+          &:first-of-type {
+            margin: 0 0 4px;
+          }
         }
       }
     }
   }
-
 }
 
 /*----------------------------------------------------

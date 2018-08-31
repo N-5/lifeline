@@ -4,8 +4,9 @@
     <div class="sidebar_list">
       <p class="heading">おすすめ</p>
       <ul class="sidebar__item">
-        <li><a href="http://lifeline-lg.com/speedjobs/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item1.jpg" alt="sample"></a></li>
-        <li><a href="<?php echo home_url(); ?>/recruit"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="sample"></a></li>
+        <li><a href="<?php echo home_url(); ?>/recruit"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック！"></a></li>
+        <li><a href="<?php echo home_url(); ?>/cat_recruit_way/正社員求人/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック！"></a></li>
+        <li><a href="<?php echo home_url(); ?>/blog/2413/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item3.jpg" alt="SPEED JOBS"></a></li>
       </ul>
     </div>
     <div class="sidebar_list">

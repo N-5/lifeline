@@ -7,6 +7,19 @@
     <div class="recruitList-category">
       <ul>
         <?php
+        $custom_post_tag = 'cat_recruit_way';
+        $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
+        if(!empty($custom_post_tag_terms)){
+          if(!is_wp_error( $custom_post_tag_terms )){
+            foreach($custom_post_tag_terms as $term){
+              $tag_term_link = get_term_link($term->slug, $custom_post_tag);
+              $tag_term_name = $term->name;
+              echo '<li class="is-way"><a href="'.$tag_term_link.'">'.$tag_term_name.'</a></li>';
+            }
+          }
+        }
+        ?>
+        <?php
         $custom_post_tag = 'cat_recruit';
         $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
         if(!empty($custom_post_tag_terms)){
@@ -22,6 +35,7 @@
       </ul>
     </div>
     <div class="recruitList-head">
+      <a href="<?php the_permalink(); ?>">
       <figure class="recruitList-head__thumbnail">
         <?php 
         $image = get_field('recruit_info00');
@@ -39,6 +53,7 @@
           echo $post->post_title;
         } ?>
       </p>
+      </a>
     </div>
     <div class="recruitList-body">
       <p class="recruitList-body__lead">

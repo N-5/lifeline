@@ -143,7 +143,7 @@
     .header-inquiry {
       display: inline-block;
       vertical-align: top;
-      width: 560px;
+      width: 566px;
       .header-inquiry__text {
         display: inline-block;
         .item {
@@ -253,16 +253,21 @@
             padding-bottom: 12px;
             font-size: 14px;
             cursor: auto;
+            &:after {
+              content: '';
+              position: absolute;
+              height: 2px;
+              width: 0;
+              bottom: 0;
+              left: 50%;
+              background: $color-main;
+              transition: all 0.24s ease-out;
+            }
             &:hover  {
               color: $color-main;
               &:after {
-                content: '';
-                position: absolute;
-                height: 2px;
                 width: 100%;
-                bottom: 0;
                 left: 0;
-                background: $color-main;
               }
             }
           }
@@ -295,7 +300,10 @@
     background: $color-main;
     transition: .24s ease all;
     z-index: 9999;
-    @include media(md) {
+    @include media(sm) {
+      padding: 6% 10% 20% 10%;
+    }
+    @include media(lg) {
       display: none !important;
     }
     .navsp-entry {
@@ -324,10 +332,16 @@
           .jp {
             display: block;
             font-size: 2vw;
+            @include media(sm) {
+              font-size: 10px;
+            }
           }
           .en {
             font-family: $lato;
             font-size: 3.4vw;
+            @include media(sm) {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -335,6 +349,9 @@
         a {
           background: #fff;
           font-size: 4vw;
+          @include media(sm) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -350,12 +367,12 @@
       .searchform-body {
         .searchform-list {
           .name {
-            color: #fff;
+            color: #fff !important;
           }
         }
         .button-search {
           input {
-            background: #999;
+            background: #999 !important;
           }
         }
       }
@@ -367,6 +384,9 @@
           color: #fff;
           padding: 14px 5px;
           border-bottom: 1px solid #fff;
+          @include media(sm) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -374,6 +394,10 @@
       display: flex;
       justify-content: space-between;
       margin: 20px 0;
+      @include media(sm) {
+        max-width: 300px;
+        margin: 20px auto;
+      }
       >div {
         width: 48%;
       }

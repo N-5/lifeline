@@ -22,7 +22,15 @@ function stopload(){
   $('#progress-bar').delay(600).fadeOut(300);
 }
 setTimeout(stopload,10000);
-
+  
+  
+var topBtn = $('.c-pagetop');    
+topBtn.click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+});
 
 /* ブレークポイント769pxで画像の切り替え */
 var $setElem = $('.imgchange'), 
@@ -68,19 +76,30 @@ $(window).scroll(function(){
   var st = $(window).scrollTop();
   if( st > 100 ){
     $('.c-pagetop').fadeIn();
+    
   }else{
     $('.c-pagetop').fadeOut();
+    
   }
 });
-  $(window).scroll(function(){
-    var sm = $(window).scrollTop();
-    if( sm > 60 ){
-      $('.header').addClass('is-scroll');
-    }else{
-      $('.header').removeClass('is-scroll');
-    }
-  });
-
+$(window).scroll(function(){
+  var sm = $(window).scrollTop();
+  if( sm > 60 ){
+    $('.header').addClass('is-scroll');
+  }else{
+    $('.header').removeClass('is-scroll');
+  }
+});
+var start_pos = 0;
+$(window).scroll(function(e){
+  var current_pos = $(this).scrollTop();
+  if (current_pos > start_pos) {
+    $('.c-fixlist').removeClass('is-active');
+  } else {
+    $('.c-fixlist').addClass('is-active');
+  }
+  start_pos = current_pos;
+});
 
 /* アンカーにアニメートする */
 $('a[href^=#]').click(function() {

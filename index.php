@@ -16,32 +16,33 @@
     <section class="banner">
       <div class="banner-inner c-container">
         <div class="banner-list">
-          <div class="banner-item"><a href="http://lifeline-lg.com/speedjobs/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item1.jpg" alt="新着求人をチェック"></a></div>
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/recruit"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="speed Jobs"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/recruit"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/正社員求人/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/blog/3275/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item3.jpg" alt="speed Jobs"></a></div>
         </div>
       </div>
     </section>
     <section class="anchor c-anchor">
       <div class="anchor-inner">
         <ul class="anchor-list">
-          <li class="anchor-item"><a href="#recommend">おすすめ求人リスト</a></li>
-          <li class="anchor-item"><a href="#feature">求人特集</a></li>
-          <li class="anchor-item"><a href="#knowhow">就職・転職ノウハウ集</a></li>
-          <li class="anchor-item"><a href="#info">事務所・店舗情報</a></li>
+          <li class="anchor-item"><a href="#recommend">新着求人</a></li>
+          <li class="anchor-item"><a href="#recruitfeature">求人特集</a></li>
+          <li class="anchor-item"><a href="#companyfeature">企業特集</a></li>
+          <li class="anchor-item"><a href="#knowhow">転職成功ノウハウ</a></li>
         </ul>
       </div>
     </section>
     <section id="recommend" class="recommend">
       <div class="recommend-inner c-container">
         <div class="c-section-title">
-          <h2 class="heading">おすすめ求人リスト</h2>
-          <p class="lead">ダミーです。今一押しの人気求人情報をまとめました。おすすめの本文が入ります。</p>
+          <h2 class="heading">おすすめ新着求人</h2>
+          <p class="lead">石川県・福井県・富山県の<br class="u-sp">新着おすすめ求人を随時更新！</p>
         </div>
         <div class="c-recruitList">
           <?php
           $loop = new WP_Query (array(
             'post_type'			=> 'recruit',
-            'order'				=> 'DESC',
+            'order'				=> 'ASC',
             'posts_per_page'	=> 6,
             'offset' => 2
           ));
@@ -53,11 +54,11 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit">求人情報一覧</a></div>
       </div>
     </section>
-    <section id="feature" class="feature">
+    <section id="recruitfeature" class="feature">
       <div class="feature-inner c-container">
         <div class="c-section-title">
           <h2 class="heading">求人特集</h2>
-          <p class="lead">ダミーです。会社の企業理念や、社内環境、待遇など、会社で選びたい方向けに、素敵な企業をピックアップしました。</p>
+          <p class="lead">このコーナーでは、求人 転職のプロであるライフラインが様々な視点でピックアップした求人を特集としてまとめています。<br>職種や働き方、地域などでまとめているので新しい視点であなたにあった求人が見つかるかも。</p>
         </div>
         <div class="feature-banner">
           <ul class="feature-banner-list">
@@ -97,11 +98,11 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_blog/feature_recruit/">ピックアップ求人情報</a></div>
       </div>
     </section>
-    <section id="feature" class="feature">
+    <section id="companyfeature" class="feature">
       <div class="feature-inner c-container">
         <div class="c-section-title">
           <h2 class="heading">企業特集</h2>
-          <p class="lead">ダミーです。会社の企業理念や、社内環境、待遇など、会社で選びたい方向けに、素敵な企業をピックアップしました。</p>
+          <p class="lead">このコーナーでは、ライフラインがおすすめする、石川県・福井県で今一番の注目企業のお仕事情報をインタビュー形式で一挙掲載。<br>地元の成長企業や大手企業、外資系企業など、あなたにぴったりのお仕事を見つけてください。</p>
         </div>
         <div class="feature-banner">
           <ul class="feature-banner-list">
@@ -143,18 +144,19 @@
     </section>
     <section id="knowhow" class="knowhow">
       <div class="c-section-title">
-        <h2 class="heading">就職・転職のプロが教える<br class="u-lg">就職・転職ノウハウ集</h2>
-        <p class="lead">応募したい企業は見つかりましたか？エントリーしたら、さっそく応募に備えましょう。履歴書や面接などの明日から使えるノウハウを多数掲載！</p>
+        <h2 class="heading">プロが教える転職成功ノウハウ</h2>
+        <p class="lead">就職・転職のプロであるライフラインのスタッフが贈る、お役立ち転職ノウハウ<br>面接や履歴書の書き方など転職を成功に導くための有益な情報が盛りだくさん。はじめての方でも役立つノウハウをご紹介します。</p>
       </div>
       <div class="knowhow-inner c-container">
-        <h3 class="c-block-title">面接について</h3>
+        <h3 class="c-block-title">履歴書・職務経歴書について</h3>
         <div class="knowhow-post">
           <div class="knowhow-block">
             <div class="knowhow-post__pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/knowhow_img_1.jpg" alt=""></div>
             <div class="knowhow-post__text">
-              転職の面接でよくある質問とプロの回答例をご紹介。転職面接で定番の「自己紹介」「自己PR」などの質問から、面接の序盤・中盤・終盤などシーン別のよくある質問、年代、キャリア別のよくある質問などを網羅。想定問答から、採用担当者の質問の意図と回答例や、面接時のマナーなども学べる面接対策の決定版です。
+              面接は企業が応募者に対して採用を判断するだけでなく、応募者にとっても入社する企業を見極めるための重要な場です。面接は制限時間が指定される場合もあり、その中で自分の良さを伝えなければなりません。実際の面接では短い時間での発言を求められるので、アピールするためのコツが必要です。効果的にアピールできるよう、世代別でのPRポイントやNGポイントをご紹介していきます。好印象を与える事ができる面接ノウハウについて学んでみましょう。
             </div>
           </div>
+<!--
           <h3 class="knowhow-post__title">自己紹介でよくある質問</h3>
           <div class="knowhow-post__question">
             <h4>「自己紹介をお願いします。」</h4>
@@ -168,6 +170,8 @@
               ・応募企業で活かせるポイント<br>
             </p>
           </div>
+-->
+<!--
           <div class="knowhow-post__answer">
             <h4>【回答例】</h4>
             <p>
@@ -177,6 +181,7 @@
               今後は、自社のマーケティングだけでなく、幅広い業種のマーケティングに挑戦していきたいと思い、キャンペーン企画を強みに多様な企業をクライアントとして持つ御社に応募させていただきました。本日はどうぞよろしくお願いいたします。
             </p>
           </div>
+-->
           <div class="knowhow-blog">
             <ul class="knowhow-blog-list">
               <?php
@@ -187,7 +192,7 @@
                   array(
                     'taxonomy' => 'cat_blog',
                     'field' => 'slug',
-                    'terms' => 'recruiting-know-how'
+                    'terms' => 'resume'
                   )
                 )
               );
@@ -215,17 +220,18 @@
             </ul>
           </div>
         </div>
-        <div class="c-button button-type-list"><a href="">身だしなみについての記事一覧</a></div>
+        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_blog/resume/">履歴書・職務経歴書についての記事一覧</a></div>
       </div>
       <div class="knowhow-inner c-container">
-        <h3 class="c-block-title">身だしなみについて</h3>
+        <h3 class="c-block-title">面接対策について</h3>
         <div class="knowhow-post">
           <div class="knowhow-block">
-            <div class="knowhow-post__pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/knowhow_img_1.jpg" alt=""></div>
+            <div class="knowhow-post__pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/knowhow_img_2.jpg" alt=""></div>
             <div class="knowhow-post__text">
-              転職の面接でよくある質問とプロの回答例をご紹介。転職面接で定番の「自己紹介」「自己PR」などの質問から、面接の序盤・中盤・終盤などシーン別のよくある質問、年代、キャリア別のよくある質問などを網羅。想定問答から、採用担当者の質問の意図と回答例や、面接時のマナーなども学べる面接対策の決定版です。
+              転職活動を始める際、必ず用意しなければならない書類が「履歴書」と「職務経歴書」です。転職活動が上手くいくか否かの最初の鍵となります。仕事に対する姿勢や志望度合を判断していますので、丁寧な印象を持ってもらえるよう心掛けましょう。履歴書の基本ルールや、書き方のポイントなど、採用担当者の心に響く履歴書作りのコツを徹底的に解説します！最低限のマナーはしっかり押さえた上で、あなた自身のことが伝わる履歴書・職務経歴書の作成ノウハウを学んでいきましょう。
             </div>
           </div>
+<!--
           <h3 class="knowhow-post__title">自己紹介でよくある質問</h3>
           <div class="knowhow-post__question">
             <h4>「自己紹介をお願いします。」</h4>
@@ -248,6 +254,7 @@
               今後は、自社のマーケティングだけでなく、幅広い業種のマーケティングに挑戦していきたいと思い、キャンペーン企画を強みに多様な企業をクライアントとして持つ御社に応募させていただきました。本日はどうぞよろしくお願いいたします。
             </p>
           </div>
+-->
           <div class="knowhow-blog">
             <ul class="knowhow-blog-list">
               <?php
@@ -258,7 +265,7 @@
                   array(
                     'taxonomy' => 'cat_blog',
                     'field' => 'slug',
-                    'terms' => 'recruiting-know-how'
+                    'terms' => 'interview'
                   )
                 )
               );
@@ -286,24 +293,24 @@
             </ul>
           </div>
         </div>
-        <div class="c-button button-type-list"><a href="">身だしなみについての記事一覧</a></div>
+        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_blog/interview/">面接対策に関する記事一覧</a></div>
       </div>
     </section>
     <section id="about" class="about">
       <div class="about-inner c-container">
-        <div class="c-section-title title_type_left">
-          <h2 class="heading">このサイトは<br class="u-lg">株式会社ライフラインが運営する就職・転職サイトです</h2>
+        <div class="c-section-title">
+          <h2 class="heading">世の中が思いつかない圧倒的に凄いもの</h2>
         </div>
         <div class="about-info">
-          <p class="text">ライフラインの運営する転職求人サイトでは、<br class="u-lg-max">
-            金沢を始めとした北陸（石川県・福井県・富山県）の<br class="u-lg-max">
-            厳選した求人転職情報を毎週更新しております。<br class="u-lg-max">
-            また、こちらに掲載している求人に関してのご相談は、<br class="u-lg-max">
-            お電話、エントリー、お問い合わせフォームの他に、<br class="u-lg-max">
-            お近くの事業所やSpeed Jobs店舗でも<br class="u-lg-max">
-            受け付けております。
+          <p class="text">『美しい女性を口説こうと思ったとき、ライバルがバラを１０本贈ったら、<br class="u-lg-max">
+            君は１５本贈るかい？そう思った時点で君の負けだ。その女性が何を望んでいるのか、見極めることが重要なんだ』<br class="u-lg-max">
+            これはスティーブ・ジョブズがiMacの開発をしていた当時、周囲に語った言葉です。<br class="u-lg-max">
+            ライバルよりも少しいいものを目指すのではなく、世の中が思いつかない圧倒的に凄いものをつくることが重要なのだと。<br class="u-lg-max">
+            ライフラインでは偉大なスティーブ・ジョブズからヒントをもらい、<br class="u-lg-max">
+            これまでにない来店型の民間版ハローワークとなるスピードジョブズを立ち上げました。<br class="u-lg-max">
+              私たちは今後も人材と企業を結ぶ次世代型ソリューションとして、多くの方々の“生命線”として歩み続けます。
           </p>
-          <figure class="picture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/about-picture.jpg" alt=""></figure>
+<!--          <figure class="picture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/about-picture.jpg" alt=""></figure>-->
         </div>
       </div>
     </section>
@@ -315,9 +322,9 @@
           </div>
           <div class="info-company-list">
             <div class="info-company-list__item">
-              <div class="name">本社<div class="map"><a href="https://goo.gl/maps/eDWTcejevkm" target="_blank">Google Map</a></div></div>
+              <div class="name">本社<div class="map"><a href="https://goo.gl/maps/qkd5kU3bTKn" target="_blank">Google Map</a></div></div>
               <div class="adress">
-                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/info-company.jpg" alt=""></figure>
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/info-company.jpg" alt="本社外観"></figure>
                 <p>〒921-8013<br>
                   石川県金沢市新神田2丁目14番21号<br>
                   <a href="tel:0762918001">TEL：076-291-8001</a><br>
@@ -326,33 +333,36 @@
               </div>
             </div>
             <div class="info-company-list__item">
-              <div class="name">福井支社<div class="map"><a href="https://goo.gl/maps/PrT85wZfCV22" target="_blank">Google Map</a></div></div>
+              <div class="name">福井支店<div class="map"><a href="https://goo.gl/maps/PrT85wZfCV22" target="_blank">Google Map</a></div></div>
               <div class="adress">
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/info-company2.jpg" alt="福井支社外観"></figure>
                 <p>
                   〒910-0837<br>
-                  福井県福井市高柳1丁目708番地　レリアン103<br>
+                  福井県福井市高柳1丁目708番地<br>レリアン103<br>
                   <a href="tel:0776433000">TEL：0776-43-3000</a><br>
                   FAX：0776-43-3100<br>
                 </p>
               </div>
             </div>
             <div class="info-company-list__item">
-              <div class="name">スピードジョブス金沢店<div class="map"><a href="https://goo.gl/maps/LQFC9APmzE92" target="_blank">Google Map</a></div></div>
+              <div class="name">スピードジョブズ金沢店<div class="map"><a href="https://goo.gl/maps/LQFC9APmzE92" target="_blank">Google Map</a></div></div>
               <div class="adress">
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/info-company3.jpg" alt="スピードジョブス金沢店外観"></figure>
                 <p>
                   〒921-8801<br>
-                  石川県野々市市御経塚二丁目91番地　2階210−03区画<br>
+                  石川県野々市市御経塚二丁目91番地<br>2階210−03区画<br>
                   <a href="tel:0762595190">TEL：076-259-5190</a><br>
                     FAX：076-259-5191<br>
                 </p>
               </div>
             </div>
             <div class="info-company-list__item">
-              <div class="name">スピードジョブス小松店<div class="map"><a href="https://goo.gl/maps/6ZGUx2R1fAo" target="_blank">Google Map</a></div></div>
+              <div class="name">スピードジョブズ小松店<div class="map"><a href="https://goo.gl/maps/6ZGUx2R1fAo" target="_blank">Google Map</a></div></div>
               <div class="adress">
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/info-company4.jpg" alt="スピードジョブス小松店外観"></figure>
                 <p>
                   〒923-8585<br>
-                  石川県小松市清六町315番地　イオンモール新小松2F<br>
+                  石川県小松市清六町315番地<br>イオンモール新小松2F<br>
                   <a href="tel:0761231145">TEL：0761-23-1145</a><br>
                   FAX：0761-23-1144<br>
                 </p>
@@ -361,9 +371,10 @@
             <div class="info-company-list__item">
               <div class="name">スピードジョブズ福井店<div class="map"><a href="https://goo.gl/maps/2pcJUg4k3iA2" target="_blank">Google Map</a></div></div>
               <div class="adress">
+                <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/info-company5.jpg" alt="スピードジョブズ福井店外観"></figure>
                 <p>
                   〒918-8015<br>
-                  福井県福井市花堂南2丁目16番1号　ショッピングシティベル1F<br>
+                  福井県福井市花堂南2丁目16番1号<br>ショッピングシティベル1F<br>
                   <a href="tel:0776436213">TEL：0776-43-6213</a><br>
                   FAX：0776-43-6214<br>
                 </p>

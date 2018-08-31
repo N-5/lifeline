@@ -3,7 +3,8 @@
   <div id="blogArchive" class="main">
     <div class="c-headingLarge">
       <h2 class="heading"><?php single_term_title(); ?></h2>
-      <p class="text">ダミーです。ブログのテキストが入ります。</p>
+      <p class="text">このコーナーでは、求人 転職のプロであるライフラインが様々な視点でピックアップした求人情報・企業情報を特集としてまとめています。<br>
+        会社の社風・環境や職種・働き方などでまとめているので新しい視点であなたにあった求人が見つかるかも。</p>
     </div>
     <div class="c-container">
       <div class="entryWrap">

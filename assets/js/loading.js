@@ -64,8 +64,8 @@ Barba.Dispatcher.on('transitionCompleted', function() {
     $('.header').toggleClass('is-active');
   });
   $('.header-navsp a').on('click',function(){
-    $('.header-menu').toggleClass('is-active');
-    $('.header').toggleClass('is-active');
+    $('.header-menu').removeClass('is-active');
+    $('.header').removeClass('is-active');
   });
   //FBを再描画
   if(!window.FB){
