@@ -2265,7 +2265,8 @@ c-breadcrumbs
   position: relative;
   padding: 60px 15px 15px;
   font-weight: bold;
-  color: #fff;
+  color: #000;
+  text-shadow: 0px 0px 5px #fff;
 }
 @media screen and (min-width: 554px) {
   #index .feature .feature-inner .feature-banner .feature-banner-list .feature-banner-item a .heading {

@@ -5,16 +5,41 @@
 <div class="footer-inner c-container">
   <div class="footer-nav">
     <h3 class="heading">求人情報<span>RECRUIT</span></h3>
+<!--
     <div class="area">
       <div class="area-item">
         <div class="footer-nav-list">
-          <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/recruit">新着求人</a></li>
+          <ul class="footer-nav-list__item item-col2">
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/new/">新着求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/">正社員求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/dispatch/">派遣求人</a></li>
+          </ul>
+          <ul class="footer-nav-list__item item-col2">
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/new/">パートタイム求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/">Wワーク求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/dispatch/">高収入求人</a></li>
           </ul>
         </div>
       </div>
     </div>
+-->
     <div class="footer-nav-list">
+      <div class="area">
+        <div class="area-item">
+          <ul class="footer-nav-list__item item-col1">
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/new/">新着求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/">正社員求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/dispatch/">派遣求人</a></li>
+          </ul>
+        </div>
+        <div class="area-item">
+          <ul class="footer-nav-list__item item-col1">
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/part/">パートタイム求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/wwork/">Wワーク求人</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/highincome/">高収入求人</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="area">
         <div class="area-item">
           <h4 class="name">地域別で求人をさがす</h4>
@@ -68,28 +93,19 @@
       </div>
       <div class="pickup">
         <h4 class="name">求人特集からさがす</h4>
-        <!--<div class="pickup-item">
+        <div class="pickup-item">
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/">土日休み&amp;正社員の求人特集</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_blog/feature_recruit/">ピックアップ求人情報</a></li>
           </ul>
-          <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/">ものづくりのお仕事特集</a></li>
-          </ul>
-          <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/">未経験者OK！手に職がつくお仕事</a></li>
-          </ul>
-        </div>-->
+        </div>
       </div>
       <div class="feature">
         <h4 class="name">企業特集からさがす</h4>
-        <!--<div class="feature-item">
+        <div class="feature-item">
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/">企業特集と同じ会社名が入ります。</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_blog/feature-company/">企業特集一覧</a></li>
           </ul>
-          <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/">NGKセラミックデバイス株式会社</a></li>
-          </ul>
-        </div>-->
+        </div>
       </div>
       <div class="about">
         <h3 class="heading">ライフラインについて<span>LIFE LINE</span></h3>
@@ -99,12 +115,12 @@
             <li><a href="http://lifeline-lg.com/speedjobs/" target="_blank">スピードジョブズ</a></li>
           </ul>
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/blog">お知らせ＆ブログ</a></li>
-            <li><a href="<?php echo home_url(); ?>/cat_blog/recruiting-know-how">転職成功ノウハウ</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_blog/news/">お知らせ＆ブログ</a></li>
+            <li><a href="<?php echo home_url(); ?>/cat_blog/recruiting-know-how/">転職成功ノウハウ</a></li>
           </ul>
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/contact">お問い合わせ</a></li>
-            <li><a href="<?php echo home_url(); ?>/entry">応募フォーム</a></li>
+            <li><a href="<?php echo home_url(); ?>/contact/">お問い合わせ</a></li>
+            <li><a href="<?php echo home_url(); ?>/entry/">応募フォーム</a></li>
           </ul>
         </div>
       </div>
@@ -112,16 +128,16 @@
         <h3 class="heading">サイトメニュー<span>MENU</span></h3>
         <div class="menu-item">
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/privacy">プライバシー・ポリシー</a></li>
+            <li><a href="<?php echo home_url(); ?>/privacy/">プライバシー・ポリシー</a></li>
           </ul>
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/sitemap">サイトマップ</a></li>
+            <li><a href="<?php echo home_url(); ?>/sitemap/">サイトマップ</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-information">
-      <div class="information-link"><a href="<?php echo home_url(); ?>/client"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer-infomationlink.jpg" alt="求人掲載をご希望の企業様へ"></a></div>
+      <div class="information-link"><a href="<?php echo home_url(); ?>/client/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer-infomationlink.jpg" alt="求人掲載をご希望の企業様へ"></a></div>
       <div class="information-text">
         <p class="subscript">お仕事探しのご相談、企業の採用担当者様</p>
         <p class="call"><a href="tel:0120555807">0120-555-807</a></p>

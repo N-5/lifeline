@@ -16,8 +16,8 @@
     <section class="banner">
       <div class="banner-inner c-container">
         <div class="banner-list">
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/recruit"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック"></a></div>
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/正社員求人/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/new/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック"></a></div>
           <div class="banner-item"><a href="<?php echo home_url(); ?>/blog/3275/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item3.jpg" alt="speed Jobs"></a></div>
         </div>
       </div>
@@ -42,16 +42,14 @@
           <?php
           $loop = new WP_Query (array(
             'post_type'			=> 'recruit',
-            'order'				=> 'ASC',
-            'posts_per_page'	=> 6,
-            'offset' => 2
+            'posts_per_page'	=> 6
           ));
           while ($loop -> have_posts()) : $loop -> the_post();
           ?>
           <?php get_template_part('components/recruit-list'); ?>
           <?php endwhile; ?>
         </div>
-        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit">求人情報一覧</a></div>
+        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit/">求人情報一覧</a></div>
       </div>
     </section>
     <section id="recruitfeature" class="feature">
@@ -200,7 +198,15 @@
               if($domestic_post) : foreach($domestic_post as $post) : setup_postdata( $post ); ?>
               <li class="knowhow-blog-list__item">
                 <a href="<?php the_permalink(); ?>">
-                  <figure class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/sample.jpg" alt=""></figure>
+                  <figure class="thumb">
+                    <?php 
+                    $image = get_field('blog_thumbnail');
+                    $size = 'blog_thumb';
+                    if( $image ) {
+                      echo wp_get_attachment_image( $image, $size );
+                    }
+                    ?>
+                  </figure>
                   <p class="title">
                     <time class="time"><span><?php the_time('Y年n月j日'); ?></span></time>
                     <?php if(mb_strlen($post->post_title, 'UTF-8')>30){
@@ -273,7 +279,15 @@
               if($domestic_post) : foreach($domestic_post as $post) : setup_postdata( $post ); ?>
               <li class="knowhow-blog-list__item">
                 <a href="<?php the_permalink(); ?>">
-                  <figure class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/sample.jpg" alt=""></figure>
+                  <figure class="thumb">
+                    <?php 
+                    $image = get_field('blog_thumbnail');
+                    $size = 'blog_thumb';
+                    if( $image ) {
+                      echo wp_get_attachment_image( $image, $size );
+                    }
+                    ?>
+                  </figure>
                   <p class="title">
                     <time class="time"><span><?php the_time('Y年n月j日'); ?></span></time>
                     <?php if(mb_strlen($post->post_title, 'UTF-8')>30){
@@ -299,7 +313,7 @@
     <section id="about" class="about">
       <div class="about-inner c-container">
         <div class="c-section-title">
-          <h2 class="heading">世の中が思いつかない圧倒的に凄いもの</h2>
+          <h2 class="heading">世の中が思いつかない<br class="u-sp">圧倒的に凄いもの</h2>
         </div>
         <div class="about-info">
           <p class="text">『美しい女性を口説こうと思ったとき、ライバルがバラを１０本贈ったら、<br class="u-lg-max">
