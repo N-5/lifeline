@@ -5,7 +5,7 @@
      <div class="hero">
        <picture>
          <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_sp.jpg">
-         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_pc.jpg" alt="">
+         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_pc.jpg" alt="株式会社ライフライン">
        </picture>
      </div>
       <div class="searchform c-searchform">

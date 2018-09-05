@@ -3,7 +3,9 @@
   <div id="recruitArchive" class="main">
     <div class="c-headingLarge">
       <h2 class="heading">求人情報</h2>
-      <p class="text">正社員で働きたい人にオススメの優良正社員求人を多数掲載。<br>地域や業種、職種、活かせるスキルや働き方の特徴から正社員の求人をさがすことができます。</p>
+      <p class="text">幅広い職種・業界、地域別での優良求人を多数掲載。<br>
+      「自分のライフスタイルに合わせて働きたい」「正社員で働きたい」「今までの経験を活かしたい」など<br>
+      自分に合った働き方から探すことができます。</p>
     </div>
     <div class="c-container">
       <div class="c-recruitList">
