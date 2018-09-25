@@ -2,7 +2,7 @@
 <main>
   <div id="searchPage" class="main">
     <div class="c-headingLarge">
-      <h2 class="heading">検索結果</h2>
+      <h2 class="heading">求人検索結果</h2>
     </div>
     <section class="result c-container">
       <?php
