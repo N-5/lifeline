@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>">
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/assets/font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/barba.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/script-min.js"></script>
 <!-- wp_head -->
 <?php wp_head(); ?>
 <!-- ie -->
@@ -35,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="c-container">
     <h1 class="header-sitename">
       <a href="<?php echo home_url(); ?>">
-        <div class="disription">石川県・福井県・富山県の転職なら<br>ライフラインの求人転職サイト</div>
+        <div class="disription">石川県 金沢市 福井県 福井市 富山県で<br>転職するならライフライン<span class="hide" style="font-size:0;">｜豊富な転職・求人情報で支援する金沢・福井最大級の求人転職サイト</span></div>
         <div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/LifeLine_sm_logo.svg" alt="株式会社ライフライン" class="logo-sm"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/LifeLine_lg_logo.svg" alt="株式会社ライフライン" class="logo-lg"></div>
       </a>
     </h1>

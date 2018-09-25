@@ -175,22 +175,36 @@
         <p class="sub">＼ 他にもおすすめ求人多数！ ／</p>
         <h4 class="title">この求人を見た人は<br>こちらの求人もおすすめです</h4>
         <div class="c-recruitList c-container">
-        <?php
-        global $post;
-        $args = array(
-          'numberposts' => 4,
-          'post_type' => 'recruit',
-          'orderby' => 'rand',
-          'post__not_in' => array($post->ID) //表示中の記事を除外
-        );
-        ?>
-        <?php $myPosts = get_posts($args); if($myPosts) : ?>
-        <?php foreach($myPosts as $post) : setup_postdata($post); ?>
+          <?php // 現在表示されている投稿と同じタームに分類された投稿を取得
+          $taxonomy_slug = 'cat_recruit_way';
+          $post_type_slug = 'recruit';
+          $post_terms = wp_get_object_terms($post->ID, $taxonomy_slug);
+          if( $post_terms && !is_wp_error($post_terms)) {
+            $terms_slug = array();
+            foreach( $post_terms as $value ){
+              $terms_slug[] = $value->slug;
+            }
+          }
+          $args = array(
+            'post_type' => $post_type_slug,
+            'posts_per_page' => 4,
+            'orderby' =>  'rand',
+            'post__not_in' => array($post->ID), // 現在の投稿を除外
+            'tax_query' => array(
+              array(
+                'taxonomy' => $taxonomy_slug,
+                'field' => 'slug', // スラッグに一致するタームを返す
+                'terms' => $terms_slug
+              )
+            )
+          );
+          $the_query = new WP_Query($args); if($the_query->have_posts()):
+          ?>
+          <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
             <?php get_template_part('components/recruit-list'); ?>
-        <?php endforeach; ?>
-        <?php else : ?>
-        <p>関連アイテムはまだありません。</p>
-        <?php endif; wp_reset_postdata(); ?>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
         </div>
       </div>
     </div><!-- /.container -->

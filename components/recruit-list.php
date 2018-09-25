@@ -39,7 +39,7 @@
       <figure class="recruitList-head__thumbnail">
         <?php 
         $image = get_field('recruit_info00');
-        $size = 'custom_size_detail';
+        $size = 'custom_size';
         if( $image ) {
           echo wp_get_attachment_image( $image, $size );
         }

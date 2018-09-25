@@ -1,5 +1,18 @@
 <?php
 
+
+// Hide useless admin menu
+function remove_admin_menu() {
+  remove_menu_page('edit.php');
+  remove_menu_page('edit-comments.php');
+  remove_menu_page('themes.php');
+//  remove_menu_page( 'plugins.php' );
+  remove_menu_page( 'users.php' ); 
+  //  remove_menu_page( 'options-general.php' );
+}
+add_action('admin_menu', 'remove_admin_menu');
+
+
   // show_countをaタグ内に表示
   add_filter( 'wp_list_categories', 'my_list_categories', 10, 2 );
   function my_list_categories( $output, $args ) {
@@ -40,40 +53,6 @@
 
 
 
-  // カスタム投稿の管理画面ページ日付順ソート
-  function set_post_types_admin_order( $wp_query ) {
-    if (is_admin()) {
-      $post_type = $wp_query->query['post_type'];
-      if ( $post_type == 'recruitinfo' ) {
-          $wp_query->set('orderby', 'date');
-          $wp_query->set('order', 'DESC');
-        }
-      }
-    }
-  add_filter('pre_get_posts', 'set_post_types_admin_order');
-
-  // カスタム投稿の月別アーカイブ
-  global $my_archives_post_type;
-  add_filter( 'getarchives_where', 'my_getarchives_where', 10, 2 );
-  function my_getarchives_where( $where, $r ) {
-    global $my_archives_post_type;
-    if ( isset($r['post_type']) ) {
-      $my_archives_post_type = $r['post_type'];
-      $where = str_replace( '\'post\'', '\'' . $r['post_type'] . '\'', $where );
-    } else {
-      $my_archives_post_type = '';
-    }
-    return $where;
-  }
-  add_filter( 'get_archives_link', 'my_get_archives_link' );
-  function my_get_archives_link( $link_html ) {
-    global $my_archives_post_type;
-    if ( '' != $my_archives_post_type )
-      $add_link .= '?post_type=' . $my_archives_post_type;
-  	$link_html = preg_replace("/href=\'(.+)\'\s/","href='$1".$add_link." '",$link_html);
-
-    return $link_html;
-  }
 
 
 ?>
