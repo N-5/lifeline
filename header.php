@@ -92,6 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </header>
 <div id="barba-wrapper">
   <div class="barba-container">
+    <div <?php body_class(); ?>>
     <?php if ( !is_home() && !is_front_page() ) : ?>
     <div class="c-breadcrumbs">
       <div class="c-container" typeof="BreadcrumbList" vocab="http://schema.org/">
