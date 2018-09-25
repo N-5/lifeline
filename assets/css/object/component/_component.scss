@@ -651,9 +651,6 @@ c-fixlist
     pointer-events: auto;
     bottom: 0;
   }
-  .fixlist_item {
-    width: 50%;
-  }
   @include media(sm) {
     display: none !important;
   }
