@@ -10,17 +10,17 @@
     <div class="form">
       <select name="post_area">
         <option value="" selected>勤務地を選択</option>
-        <option value="kanazawa">金沢市</option>
-        <option value="hakusan">白山市</option>
-        <option value="nomi">能美市</option>
-        <option value="komatsu">小松市</option>
-        <option value="kaga">加賀市</option>
+        <option value="金沢市">金沢市</option>
+        <option value="白山市">白山市</option>
+        <option value="能美市">能美市</option>
+        <option value="小松市">小松市</option>
+        <option value="加賀市">加賀市</option>
         <option value="石川県その他">石川県その他</option>
-        <option value="fukuishi">福井市</option>
-        <option value="sakai">坂井市</option>
-        <option value="awar">あわら市</option>
-        <option value="sabae">鯖江市</option>
-        <option value="echizen">越前市</option>
+        <option value="福井市">福井市</option>
+        <option value="坂井市">坂井市</option>
+        <option value="あわら市">あわら市</option>
+        <option value="鯖江市">鯖江市</option>
+        <option value="越前市">越前市</option>
         <option value="福井県その他">福井県その他</option>
         <option value="その他の都道府県">その他の都道府県</option>
       </select>
@@ -49,17 +49,18 @@
       </select>
     </div>
   </div>
+  
 <!--
   <div class="searchform-list item">
     <div class="title name">働き方</div>
     <div class="form">
       <select name="post_tag">
         <option value="" selected>働き方を選択</option>
-        <option value="正社員求人">正社員求人</option>
-        <option value="派遣求人">派遣求人</option>
-        <option value="高収入！しっかり稼げる">高収入求人</option>
-        <option value="wワーク《本業プラスα》">Wワーク求人</option>
-        <option value="パートタイム《時間帯応相談》">パートタイム求人</option>
+        <option value="regular">正社員求人</option>
+        <option value="dispatch">派遣求人</option>
+        <option value="highincome">高収入求人</option>
+        <option value="wwork">Wワーク求人</option>
+        <option value="part">パートタイム求人</option>
       </select>
     </div>
   </div>

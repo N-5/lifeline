@@ -18,7 +18,7 @@
         <div class="banner-list">
           <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/new/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック"></a></div>
           <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック"></a></div>
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/blog/3275/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item3.jpg" alt="speed Jobs"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_blog/feature_recruit/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item6.jpg" alt="ピックアップ求人情報"></a></div>
         </div>
       </div>
     </section>
@@ -151,7 +151,7 @@
           <div class="knowhow-block">
             <div class="knowhow-post__pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/knowhow_img_1.jpg" alt=""></div>
             <div class="knowhow-post__text">
-              面接は企業が応募者に対して採用を判断するだけでなく、応募者にとっても入社する企業を見極めるための重要な場です。面接は制限時間が指定される場合もあり、その中で自分の良さを伝えなければなりません。実際の面接では短い時間での発言を求められるので、アピールするためのコツが必要です。効果的にアピールできるよう、世代別でのPRポイントやNGポイントをご紹介していきます。好印象を与える事ができる面接ノウハウについて学んでみましょう。
+              転職活動を始める際、必ず用意しなければならない書類が「履歴書」と「職務経歴書」です。転職活動が上手くいくか否かの最初の鍵となります。仕事に対する姿勢や志望度合を判断していますので、丁寧な印象を持ってもらえるよう心掛けましょう。履歴書の基本ルールや、書き方のポイントなど、採用担当者の心に響く履歴書作りのコツを徹底的に解説します！最低限のマナーはしっかり押さえた上で、あなた自身のことが伝わる履歴書・職務経歴書の作成ノウハウを学んでいきましょう。
             </div>
           </div>
 <!--
@@ -234,7 +234,7 @@
           <div class="knowhow-block">
             <div class="knowhow-post__pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/knowhow_img_2.jpg" alt=""></div>
             <div class="knowhow-post__text">
-              転職活動を始める際、必ず用意しなければならない書類が「履歴書」と「職務経歴書」です。転職活動が上手くいくか否かの最初の鍵となります。仕事に対する姿勢や志望度合を判断していますので、丁寧な印象を持ってもらえるよう心掛けましょう。履歴書の基本ルールや、書き方のポイントなど、採用担当者の心に響く履歴書作りのコツを徹底的に解説します！最低限のマナーはしっかり押さえた上で、あなた自身のことが伝わる履歴書・職務経歴書の作成ノウハウを学んでいきましょう。
+              面接は企業が応募者に対して採用を判断するだけでなく、応募者にとっても入社する企業を見極めるための重要な場です。面接は制限時間が指定される場合もあり、その中で自分の良さを伝えなければなりません。実際の面接では短い時間での発言を求められるので、アピールするためのコツが必要です。効果的にアピールできるよう、世代別でのPRポイントやNGポイントをご紹介していきます。好印象を与える事ができる面接ノウハウについて学んでみましょう。
             </div>
           </div>
 <!--
@@ -324,7 +324,6 @@
             これまでにない来店型の民間版ハローワークとなるスピードジョブズを立ち上げました。<br class="u-lg-max">
               私たちは今後も人材と企業を結ぶ次世代型ソリューションとして、多くの方々の“生命線”として歩み続けます。
           </p>
-<!--          <figure class="picture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/about-picture.jpg" alt=""></figure>-->
         </div>
       </div>
     </section>

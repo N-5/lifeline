@@ -45,23 +45,23 @@
           <h4 class="name">地域別で求人をさがす</h4>
           <p class="title">石川県</p>
           <ul class="footer-nav-list__item item-col2">
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=kanazawa&post_job=&post_tag=">金沢市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=hakusan&post_job=&post_tag=">白山市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=nomi&post_job=&post_tag=">能美市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=komatsu&post_job=&post_tag=">小松市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=kaga&post_job=&post_tag=">加賀市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=石川県その他&post_job=&post_tag=">石川県その他</a></li>
+            <li><a href="<?php echo home_url(); ?>?s=&post_area=金沢市&post_job=">金沢市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=白山市&post_job=">白山市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=能美市&post_job=">能美市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=小松市&post_job=">小松市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=加賀市&post_job=">加賀市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=石川県その他&post_job=">石川県その他</a></li>
           </ul>
         </div>
         <div class="area-item">
           <p class="title">福井県</p>
           <ul class="footer-nav-list__item item-col2">
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=fukuishi&post_job=&post_tag=">福井市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=sakai&post_job=&post_tag=">坂井市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=awar&post_job=&post_tag=">あわら市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=sabae&post_job=&post_tag=">鯖江市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=echizen&post_job=&post_tag=">越前市</a></li>
-            <li><a href="<?php echo home_url(); ?>/?s=&post_area=福井県その他&post_job=&post_tag=">福井県その他</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=福井市&post_job=">福井市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=坂井市&post_job=">坂井市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=あわら市&post_job=">あわら市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=鯖江市&post_job=">鯖江市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=越前市&post_job=">越前市</a></li>
+            <li><a href="<?php echo home_url(); ?>/?s=&post_area=福井県その他&post_job=">福井県その他</a></li>
           </ul>
         </div>
       </div>

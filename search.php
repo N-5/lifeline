@@ -13,7 +13,7 @@
 
       if($post_tag){
         $taxquerysp[] = array(
-          'taxonomy'=>'cat_recruit',
+          'taxonomy'=>'cat_recruit_way',
           'terms'=> $post_tag,
           'include_children'=>false,
           'field'=>'slug',
@@ -22,13 +22,13 @@
       }
       if($post_area){
         $taxquerysp[] = array(
-          'taxonomy'=>'cat_recruit',
+          'taxonomy'=>'cat_recruit_area',
           'terms'=> $post_area,
           'include_children'=>false,
           'field'=>'slug',
           'operator'=>'AND',
         );
-        $area_jp = get_term_by('slug', $post_area, 'cat_recruit');
+        $area_jp = get_term_by('slug', $post_area, 'cat_recruit_area');
 //        var_dump($area_jp);
       }
       if($post_job){
@@ -122,7 +122,6 @@
               'current' => ($paged ? $paged : 1),
             )); ?>
             </div>
-
           <?php wp_reset_postdata(); wp_reset_query(); ?>
           <!-- /pagenavi -->
         </div><!-- /.search-content -->

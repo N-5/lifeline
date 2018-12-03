@@ -31,6 +31,11 @@ topBtn.click(function () {
   }, 500);
   return false;
 });
+  
+  
+  $('.c-popup .close').click(function () {
+    $('.c-popup').css('display','none');  
+});
 
 /* ブレークポイント769pxで画像の切り替え */
 var $setElem = $('.imgchange'), 
@@ -86,20 +91,22 @@ $(window).scroll(function(){
   var sm = $(window).scrollTop();
   if( sm > 60 ){
     $('.header').addClass('is-scroll');
+    $('.c-popup').addClass('is-scroll');
   }else{
     $('.header').removeClass('is-scroll');
+    $('.c-popup').removeClass('is-scroll');
   }
 });
-var start_pos = 0;
-$(window).scroll(function(e){
-  var current_pos = $(this).scrollTop();
-  if (current_pos > start_pos) {
-    $('.c-fixlist').removeClass('is-active');
-  } else {
-    $('.c-fixlist').addClass('is-active');
-  }
-  start_pos = current_pos;
-});
+//var start_pos = 0;
+//$(window).scroll(function(e){
+//  var current_pos = $(this).scrollTop();
+//  if (current_pos > start_pos) {
+//    $('.c-fixlist').removeClass('is-active');
+//  } else {
+//    $('.c-fixlist').addClass('is-active');
+//  }
+//  start_pos = current_pos;
+//});
 
 /* アンカーにアニメートする */
 $('a[href^=#]').click(function() {

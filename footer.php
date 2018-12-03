@@ -8,8 +8,8 @@
       <a href="javascript:void(0)" class="js-panel">電話で求人相談</a>
       <div class="shop-list">
         <ul>
-          <li><a href="tel:0762918001">石川県の方はこちら</a></li>
-          <li><a href="tel:0776433000">福井県の方はこちら</a></li>
+          <li><a href="tel:0120555807">石川県の方はこちら</a></li>
+          <li><a href="tel:0120309555">福井県の方はこちら</a></li>
         </ul>
       </div>
     </li>

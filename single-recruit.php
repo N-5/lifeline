@@ -8,10 +8,23 @@
             <header>
               <div class="entry__heading c-page-title">
                 <div class="c-container">
-                  <time class="time">掲載日：<?php the_time('Y年m月d日'); ?>　掲載ナンバー：<?php echo the_field('recruit_info01');?></time>
+                  <time class="time">掲載日：<!-- <?php the_time('Y年m月d日'); ?> --><?php echo date("Y年m月d日"); ?>　掲載ナンバー：<?php echo the_field('recruit_info01');?></time>
                   <h1 class="heading"><?php the_title(); ?></h1>
                   <div class="entry__category">
                     <ul>
+                      <?php
+                      $custom_post_tag = 'cat_recruit_area';
+                      $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
+                      if(!empty($custom_post_tag_terms)){
+                        if(!is_wp_error( $custom_post_tag_terms )){
+                          foreach($custom_post_tag_terms as $term){
+                            $tag_term_link = get_term_link($term->slug, $custom_post_tag);
+                            $tag_term_name = $term->name;
+                            echo '<li class="is-area"><a href="'.$tag_term_link.'">'.$tag_term_name.'</a></li>';
+                          }
+                        }
+                      }
+                      ?>
                       <?php
                       $custom_post_tag = 'cat_recruit_way';
                       $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
@@ -176,7 +189,7 @@
         <h4 class="title">この求人を見た人は<br>こちらの求人もおすすめです</h4>
         <div class="c-recruitList c-container">
           <?php // 現在表示されている投稿と同じタームに分類された投稿を取得
-          $taxonomy_slug = 'cat_recruit_way';
+          $taxonomy_slug = 'cat_recruit_area';
           $post_type_slug = 'recruit';
           $post_terms = wp_get_object_terms($post->ID, $taxonomy_slug);
           if( $post_terms && !is_wp_error($post_terms)) {
@@ -187,7 +200,7 @@
           }
           $args = array(
             'post_type' => $post_type_slug,
-            'posts_per_page' => 4,
+            'posts_per_page' => 8,
             'orderby' =>  'rand',
             'post__not_in' => array($post->ID), // 現在の投稿を除外
             'tax_query' => array(

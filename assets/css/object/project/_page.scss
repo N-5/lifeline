@@ -498,6 +498,20 @@ archive
                 }
               }
             }
+            &.is-area {
+              a {
+                color: $color-white;
+                background: $color-orange;
+                border: 1px solid $color-orange;
+                &:hover {
+                  @include media(md) {
+                    opacity: .6;
+                    color: $color-white;
+                    background: $color-orange;
+                  }
+                }
+              }
+            }
             a {
               display: block;
               padding: 4px 14px;

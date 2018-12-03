@@ -7,6 +7,19 @@
     <div class="recruitList-category">
       <ul>
         <?php
+        $custom_post_tag = 'cat_recruit_area';
+        $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
+        if(!empty($custom_post_tag_terms)){
+            if(!is_wp_error( $custom_post_tag_terms )){
+                foreach($custom_post_tag_terms as $term){
+                    $tag_term_link = get_term_link($term->slug, $custom_post_tag);
+                    $tag_term_name = $term->name;
+                    echo '<li class="is-area"><a href="'.$tag_term_link.'">'.$tag_term_name.'</a></li>';
+                }
+            }
+        }
+        ?>
+        <?php
         $custom_post_tag = 'cat_recruit_way';
         $custom_post_tag_terms = wp_get_object_terms($post->ID, $custom_post_tag);
         if(!empty($custom_post_tag_terms)){
@@ -70,5 +83,5 @@
       <div class="c-button button-more button-color-blue"><a href="<?php the_permalink(); ?>">この求人の詳細を見る</a></div>
     </div>
   </article>
-  <time class="recruitList-item__time"><span>公開日：<?php the_time('Y年n月j日'); ?></span></time>
+  <time class="recruitList-item__time"><span>公開日：<!--<?php the_time('Y年n月j日'); ?> --><?php echo date("Y年m月d日"); ?></span></time>
 </div>
