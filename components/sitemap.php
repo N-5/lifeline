@@ -112,7 +112,7 @@
         <div class="about-item">
           <ul class="footer-nav-list__item item-col1">
             <li><a href="<?php echo home_url(); ?>/company">会社概要</a></li>
-            <li><a href="http://lifeline-lg.com/speedjobs/" target="_blank">スピードジョブズ</a></li>
+            <li><a href="https://lifeline-lg.com/speedjobs/" target="_blank">スピードジョブズ</a></li>
           </ul>
           <ul class="footer-nav-list__item item-col1">
             <li><a href="<?php echo home_url(); ?>/cat_blog/news/">お知らせ＆ブログ</a></li>
@@ -150,7 +150,7 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="logo"><a href="http://lifeholdings-lg.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer-logo.png" alt="LIFE LINE GROUP"></a></div>
+      <div class="logo"><a href="https://lifeholdings-lg.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer-logo.png" alt="LIFE LINE GROUP"></a></div>
       <p class="copyright">© 2018 LifeLine Co.,Ltd</p>
     </div>
   </div>

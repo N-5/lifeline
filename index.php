@@ -399,9 +399,12 @@
           <div class="c-section-title title_type_left">
             <h2 class="heading">公式Facebook</h2>
           </div>
+          <div class="fb-banner"><a href="https://www.facebook.com/ishikawarecruit/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/lifeline-fb_banner.jpg" alt=""></a></div>
+<!--
           <div class="info-sns__fb">
             <div class="fb-page" data-href="https://www.facebook.com/ishikawarecruit/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ishikawarecruit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ishikawarecruit/">ライフライン</a></blockquote></div>
           </div>
+-->
         </div>
       </div>
     </section>
