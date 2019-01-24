@@ -18,7 +18,7 @@
         <div class="banner-list">
           <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/new/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック"></a></div>
           <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック"></a></div>
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_blog/feature_recruit/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item6.jpg" alt="ピックアップ求人情報"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/blog/4836/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item7.jpg" alt="子育てパパ＆ママのための転職セミナー開催"></a></div>
         </div>
       </div>
     </section>
