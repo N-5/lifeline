@@ -9,7 +9,7 @@
     width: 100%;
     .searchform-input {
       position: relative;
-      width: 96%;
+      width: 100%;
       margin: 0 auto 20px;
       z-index: 2;
       .lp-title {
@@ -26,9 +26,16 @@
     }
     .searchform-body {
       display: flex;
-      flex-flow: row wrap;
+      justify-content: center;
+      flex-flow: column;
+      width: 90%;
+      margin: 0 auto;
       padding: 20px 0 30px;
+      @include media(md) {
+        
+      }
       @include media(lg) {
+//        width: 100%;
         padding: 20px 0 0;
       }
       .searchform-list {
@@ -36,7 +43,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 96%;
+        width: 100%;
         margin: 0 auto 20px;
         z-index: 2;
         &:last-of-type {

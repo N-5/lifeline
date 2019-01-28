@@ -77,8 +77,18 @@
       </p>
       <ul class="recruitList-body-list">
         <li class="recruitList-body-list__item adress"><p class="heading">勤務地</p><p class="contents"><?php echo get_field('recruit_info06'); ?></p></li>
-        <li class="recruitList-body-list__item money"><p class="heading">月収・給与</p><p class="contents"><?php echo get_field('recruit_info04'); ?></p></li>
-        <li class="recruitList-body-list__item check"><p class="heading">経験・資格</p><p class="contents"><?php echo get_field('recruit_info11'); ?></p></li>
+        <li class="recruitList-body-list__item money"><p class="heading">月収・給与</p><p class="contents">
+          <?php
+          if(mb_strlen(get_field('recruit_info04'))>100) { $hoge= mb_substr(get_field('recruit_info04'),0,99) ; echo $hoge. … ;}
+          else {echo get_field('recruit_info04');}
+          ?>
+        </p></li>
+        <li class="recruitList-body-list__item check"><p class="heading">経験・資格</p><p class="contents">
+          <?php
+          if(mb_strlen(get_field('recruit_info11'))>100) { $hoge= mb_substr(get_field('recruit_info11'),0,99) ; echo $hoge. … ;}
+          else {echo get_field('recruit_info11');}
+          ?>
+        </p></li>
       </ul>
       <div class="c-button button-more button-color-blue"><a href="<?php the_permalink(); ?>">この求人の詳細を見る</a></div>
     </div>
