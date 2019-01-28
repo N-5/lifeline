@@ -119,7 +119,7 @@
             <li><a href="<?php echo home_url(); ?>/cat_blog/recruiting-know-how/">転職成功ノウハウ</a></li>
           </ul>
           <ul class="footer-nav-list__item item-col1">
-            <li><a href="<?php echo home_url(); ?>/contact/">お問い合わせ</a></li>
+            <li><a href="<?php echo home_url(); ?>/contact/">来社予約・転職相談</a></li>
             <li><a href="<?php echo home_url(); ?>/entry/">応募フォーム</a></li>
           </ul>
         </div>

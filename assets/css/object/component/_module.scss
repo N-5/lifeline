@@ -33,9 +33,9 @@
   heading
 ----------------------------------------------------*/
 .c-section-title {
-  margin: 60px auto 20px;
+  padding: 60px 0 20px;
   @include media(lg) {
-    margin: 80px auto 30px;
+    padding: 80px 0 30px;
   }
   .heading {
     @include fontsize(20);
@@ -46,6 +46,7 @@
     color: #333;
     @include media(md) {
       font-size: 24px;
+      margin-bottom: 23px;
     }
     &:after {
       content: '';
@@ -113,6 +114,50 @@
     display: block;
     font-size: 12px;
     margin-bottom: 10px;
+  }
+}
+
+.c-section-title_lp {
+  margin-bottom: 25px;
+  text-align: center;
+  @include media(md) {
+    margin-bottom: 40px;
+  }
+  .heading {
+    font-size: 18px;
+    color: $color-main;
+    @include media(md) {
+      font-size: 26px;
+    }
+    span {
+      background: linear-gradient(transparent 80%,rgba(255,255,0,1) 80%);
+      @include media(md) {
+        background: linear-gradient(transparent 70%,rgba(255,255,0,1) 70%);
+      }
+    }
+  }
+  .c-text {
+    max-width: 600px;
+    margin: 20px auto 0;
+    @include media(md) {
+      text-align: left;
+    }
+  }
+}
+
+/*----------------------------------------------------
+text
+----------------------------------------------------*/
+.c-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #000;
+  @include media(sm) {
+    font-size: 14px;
+  }
+  @include media(md) {
+    font-size: 16px;
+    line-height: 2.1em;
   }
 }
 
@@ -218,19 +263,6 @@
       }
     }
   }
-}
-/*----------------------------------------------------
-  text
-----------------------------------------------------*/
-.c-text {
-  line-height: normal;
-//  @include media(TB-min) {
-//  line-height: 1.8em;
-//  @include fontsize(14)
-//  }
-//  @include media(LT-min) {
-//    @include fontsize(16)
-//  }
 }
 
 

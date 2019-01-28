@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="header-inquiry__tel"><a href="tel:0120555807">0120-555-807</a></div>
       <div class="header-inquiry__btn">
         <div class="c-button button-pen is-subscription"><a href="<?php echo home_url(); ?>/entry/">簡単1分応募</a></div>
-        <div class="c-button is-contact"><a href="<?php echo home_url(); ?>/contact/">お問い合わせ</a></div>
+        <div class="c-button is-contact"><a href="<?php echo home_url(); ?>/contact/">来社予約・転職相談</a></div>
         <div class="c-button is-speed"><a href="https://lifeline-lg.com/speedjobs/" target="_blank">
           <span class="jp">店舗型ご相談窓口</span><span class="en">Speed Jobs</span></a>
         </div>

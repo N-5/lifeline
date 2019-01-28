@@ -7,7 +7,7 @@
           <h1 class="heading">応募フォーム確認</h1>
           <p class="lead">以下のお問い合わせ内容をご確認いただき、「送信ボタン」をクリックして下さい。</p>
         </div>
-        <div class="content">
+        <div class="c-contact__content">
           <?php while(have_posts()): the_post(); ?>
           <?php the_content(); ?>
           <?php endwhile; ?>

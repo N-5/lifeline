@@ -12,7 +12,7 @@
         <div class="download">
           <div class="c-button button-type-list download"><a href="<?php echo get_template_directory_uri(); ?>/download/kyujinhyo.pdf" target="_blank">PDFを開く</a></div>
         </div>
-        <div class="content">
+        <div class="c-contact__content">
           <?php while(have_posts()): the_post(); ?>
             <?php the_content(); ?>
           <?php endwhile; ?>

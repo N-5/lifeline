@@ -1,11 +1,7 @@
 /* footer
    ----------------------------------------------------------------- */
 .footer {
-  margin-top: 60px;
   background: #EAEAE8;
-  @include media(md) {
-    margin-top: 100px;
-  }
   .footer-inner {
     padding: 40px 5%;
     @include media(md) {

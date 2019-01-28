@@ -1,0 +1,12 @@
+.barba-container {
+  >div {
+    margin-bottom: 60px;
+    @include media(md) {
+      margin-bottom: 100px;
+    }
+    &.page-id-5022,
+    &.page-id-5024 {
+      margin-bottom: 0;
+    }
+  }
+}

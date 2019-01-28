@@ -20,7 +20,7 @@
         <div class="c-section-title">
           <h1 class="heading">応募いただき<br class="u-md">ありがとうございました。</h1>
         </div>
-        <div class="content mw_wp_form_complete">
+        <div class="c-contact__content mw_wp_form_complete">
           メールの送信が完了しました。お問い合わせありがとうございました。<br>
           ※送信エラーが発生した場合、または弊社からのご連絡がエラーなどの不具合により、<br>
           3日経っても返信が届かない場合は、直接お電話、もしくはlifelinehp@lifeline-lg.comまでご連絡ください。<br>
