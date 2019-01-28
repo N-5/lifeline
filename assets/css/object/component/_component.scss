@@ -1000,16 +1000,22 @@ c-popup
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    padding: 16px 0 24px;
+    padding: 22px 0 22px;
     border-bottom: 1px solid #ddd;
     &:last-of-type {
       border-bottom: none;
+    }
+    &.js-value {
+      display: none;
+      &.is-active {
+        display: flex;
+      }
     }
     dt,dd {
       width: 100%;
     }
     dt {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-size: 14px;
       font-weight: bold;
       @include media(md) {
@@ -1123,6 +1129,24 @@ c-popup
           width: 48%;
         }
       }
+      &.regist {
+        .place,
+        .time {
+          display: flex;
+          align-items: center;
+          .name {
+            margin: 12px 20px 6px 0;
+          }
+        }
+        .place {
+          margin-bottom: 20px;
+        }
+        .time {
+          .form-month {
+            margin-right: 10px;
+          }
+        }
+      }
     }
   }
   .privacylink {
@@ -1178,6 +1202,10 @@ c-popup
       @include media(md) {
         padding: 24px 0;
       }
+      &.js-value {
+        display: flex;
+        align-items: center;
+      }
       dt {
         @include media(md) {
           margin-bottom: 0;
@@ -1194,6 +1222,9 @@ c-popup
               display: none;
             }
           }
+        }
+        &.textarea {
+          line-height: 2;
         }
       }
     }

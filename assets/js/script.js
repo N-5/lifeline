@@ -180,6 +180,16 @@ $(window).scroll(function(){
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+  //Contact Form
+  $('select[name="contact"]').change(function() {
+    var val = $(this).val();
+    var hoge ='来社予約';
+    if (val === hoge) {
+      $('.js-value').addClass('is-active');
+    } else {
+      $('.js-value').removeClass('is-active');
+    }
+  });
 //document.ready
 });
   
