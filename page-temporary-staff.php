@@ -2,7 +2,7 @@
 <main>
   <div id="temporary-staff" class="main">
     <div class="c-headingLarge">
-      <h2 class="heading">派遣社員</h2>
+      <h2 class="heading"><!--派遣社員 --></h2>
     </div>
     <div class="c-container">
       <section class="lp-lead">
@@ -108,6 +108,7 @@
             </div>
           </div>
         </div>
+        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/contact/">予約フォームはこちら</a></div>
       </section>
       <section class="lp-what">
         <div class="c-section-title_lp">
@@ -126,7 +127,7 @@
           <div class="what-list__item is-reverse">
             <div class="detail">
               <h3 class="heading">実務経験が少なくても、チャレンジしやすい</h3>
-              <p class="text">まずは派遣社員から始められるので、必要なスキルに不安があってもチャレンジしやすく、<br>自分が本当にやりたいことや適性を見つけるきっかけにもなります。</p>
+              <p class="text">まずは派遣社員から始められるので、必要なスキルに不安があってもチャレンジしやすく、自分が本当にやりたいことや適性を見つけるきっかけにもなります。</p>
             </div>
             <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/temporary-staff/what-img_2.jpg" alt=""></div>
           </div>
@@ -163,7 +164,7 @@
 -->
     <section class="lp-form">
       <div class="c-section-title">
-        <h1 class="heading">来社予約・転職相談</h1>
+        <h1 class="heading">来社予約・お仕事相談</h1>
         <p class="lead">弊社は、事業運営上必要なお客様や従業者の個人情報の取扱いにあたって、<br>以下の方針を定め、個人情報管理体制を確立し、企業として責任ある対応を実現するものとします。</p>
       </div>
       <div class="c-container">

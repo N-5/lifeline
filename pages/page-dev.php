@@ -1,13 +1,24 @@
+<?php
+/*
+Template Name: index-test
+*/
+?>
+
 <?php get_header(); ?>
+<style>
+  .c-breadcrumbs {
+    display: none;
+  }
+</style>
 <main>
   <div id="index" class="main">
     <section class="visual">
-     <div class="hero">
-       <picture>
-         <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_sp.jpg">
-         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_pc.jpg" alt="株式会社ライフライン">
-       </picture>
-     </div>
+      <div class="hero">
+        <picture>
+          <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_sp.jpg">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/hero_pc.jpg" alt="株式会社ライフライン">
+        </picture>
+      </div>
       <div class="searchform c-searchform">
         <div class="searchform-heading">求人を探す</div>
         <?php get_template_part('components/search-form'); ?>
@@ -16,8 +27,12 @@
     <section class="banner">
       <div class="banner-inner c-container">
         <div class="banner-list">
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/permanent-staff/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item8.jpg" alt="正社員はこちら"></a></div>
-          <div class="banner-item"><a href="<?php echo home_url(); ?>/temporary-staff/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item9.jpg" alt="派遣社員はこちら"></a></div>
+          <!--
+<div class="banner-item"><a href="<?php echo home_url(); ?>/permanent-staff/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item8.jpg" alt="正社員はこちら"></a></div>
+<div class="banner-item"><a href="<?php echo home_url(); ?>/temporary-staff/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item9.jpg" alt="派遣社員はこちら"></a></div>
+-->
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/new/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック"></a></div>
+          <div class="banner-item"><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック"></a></div>
           <div class="banner-item c-banner">
             <?php
             $args = array(
@@ -30,11 +45,11 @@
               <a href="<?php the_permalink(); ?>">
                 <p>
                   <?php if(mb_strlen($post->post_title, 'UTF-8')>36){
-                    $title= mb_substr($post->post_title, 0, 18, 'UTF-8');
-                    echo $title.'...';
-                  }else{
-                    echo $post->post_title;
-                  } ?>
+  $title= mb_substr($post->post_title, 0, 18, 'UTF-8');
+  echo $title.'...';
+}else{
+  echo $post->post_title;
+} ?>
                 </p>
               </a>
             </div>
@@ -101,11 +116,11 @@
                 <p class="heading"><?php the_field('feature_company'); ?>
                   <span>
                     <?php if(mb_strlen($post->post_title, 'UTF-8')>36){
-                      $title= mb_substr($post->post_title, 0, 18, 'UTF-8');
-                      echo $title.'...';
-                    }else{
-                      echo $post->post_title;
-                    } ?>
+  $title= mb_substr($post->post_title, 0, 18, 'UTF-8');
+  echo $title.'...';
+}else{
+  echo $post->post_title;
+} ?>
                   </span></p>
               </a>
             </li>
@@ -143,14 +158,14 @@
             <li class="feature-banner-item" style="background-image:url('<?php the_field('feature_thumb_pc'); ?>);">
               <a href="<?php the_permalink(); ?>">
                 <p class="heading"><?php the_field('feature_company'); ?>
-                <span>
-                  <?php if(mb_strlen($post->post_title, 'UTF-8')>36){
-                    $title= mb_substr($post->post_title, 0, 18, 'UTF-8');
-                    echo $title.'...';
-                  }else{
-                    echo $post->post_title;
-                  } ?>
-                </span></p>
+                  <span>
+                    <?php if(mb_strlen($post->post_title, 'UTF-8')>36){
+  $title= mb_substr($post->post_title, 0, 18, 'UTF-8');
+  echo $title.'...';
+}else{
+  echo $post->post_title;
+} ?>
+                  </span></p>
               </a>
             </li>
             <?php endforeach; ?>
@@ -176,31 +191,31 @@
               転職活動を始める際、必ず用意しなければならない書類が「履歴書」と「職務経歴書」です。転職活動が上手くいくか否かの最初の鍵となります。仕事に対する姿勢や志望度合を判断していますので、丁寧な印象を持ってもらえるよう心掛けましょう。履歴書の基本ルールや、書き方のポイントなど、採用担当者の心に響く履歴書作りのコツを徹底的に解説します！最低限のマナーはしっかり押さえた上で、あなた自身のことが伝わる履歴書・職務経歴書の作成ノウハウを学んでいきましょう。
             </div>
           </div>
-<!--
-          <h3 class="knowhow-post__title">自己紹介でよくある質問</h3>
-          <div class="knowhow-post__question">
-            <h4>「自己紹介をお願いします。」</h4>
-            <p>
-              先に自由な自己紹介を求められる場合も多くあります。<br>
-              この時、企業の担当者が知りたい事はなんでしょうか？<br>
-              応募者の第一印象やコミニケーション能力、自社で活躍するイメージも見ています。<br><br>
-              企業で生かせるあなた自身の職務経験を簡潔に答えられるようにしておきましょう。<br>
-              ・氏名<br>
-              ・職務経歴<br>
-              ・応募企業で活かせるポイント<br>
-            </p>
-          </div>
+          <!--
+<h3 class="knowhow-post__title">自己紹介でよくある質問</h3>
+<div class="knowhow-post__question">
+<h4>「自己紹介をお願いします。」</h4>
+<p>
+先に自由な自己紹介を求められる場合も多くあります。<br>
+この時、企業の担当者が知りたい事はなんでしょうか？<br>
+応募者の第一印象やコミニケーション能力、自社で活躍するイメージも見ています。<br><br>
+企業で生かせるあなた自身の職務経験を簡潔に答えられるようにしておきましょう。<br>
+・氏名<br>
+・職務経歴<br>
+・応募企業で活かせるポイント<br>
+</p>
+</div>
 -->
-<!--
-          <div class="knowhow-post__answer">
-            <h4>【回答例】</h4>
-            <p>
-              ダミーです。（他社サイトから引用しています）<br>
-              毎日太郎と申します。<br>
-              前職では、飲料メーカーのマーケティング職としてキャンペーンの企画やランディングページのディレクションに携わってまいりました。「◯◯キャンペーン」では前年比120％の応募数を獲得し、社内表彰を受賞しました。<br>
-              今後は、自社のマーケティングだけでなく、幅広い業種のマーケティングに挑戦していきたいと思い、キャンペーン企画を強みに多様な企業をクライアントとして持つ御社に応募させていただきました。本日はどうぞよろしくお願いいたします。
-            </p>
-          </div>
+          <!--
+<div class="knowhow-post__answer">
+<h4>【回答例】</h4>
+<p>
+ダミーです。（他社サイトから引用しています）<br>
+毎日太郎と申します。<br>
+前職では、飲料メーカーのマーケティング職としてキャンペーンの企画やランディングページのディレクションに携わってまいりました。「◯◯キャンペーン」では前年比120％の応募数を獲得し、社内表彰を受賞しました。<br>
+今後は、自社のマーケティングだけでなく、幅広い業種のマーケティングに挑戦していきたいと思い、キャンペーン企画を強みに多様な企業をクライアントとして持つ御社に応募させていただきました。本日はどうぞよろしくお願いいたします。
+</p>
+</div>
 -->
           <div class="c-knowhow-blog">
             <ul class="knowhow-blog-list">
@@ -221,7 +236,7 @@
               <li class="knowhow-blog-list__item">
                 <a href="<?php the_permalink(); ?>">
                   <figure class="thumb">
-                    <?php
+                    <?php 
                     $image = get_field('blog_thumbnail');
                     $size = 'blog_thumb';
                     if( $image ) {
@@ -232,11 +247,11 @@
                   <p class="title">
                     <time class="time"><span><?php the_time('Y年n月j日'); ?></span></time>
                     <?php if(mb_strlen($post->post_title, 'UTF-8')>30){
-                      $title= mb_substr($post->post_title, 0, 30, 'UTF-8');
-                      echo $title.'...';
-                    }else{
-                      echo $post->post_title;
-                    } ?>
+  $title= mb_substr($post->post_title, 0, 30, 'UTF-8');
+  echo $title.'...';
+}else{
+  echo $post->post_title;
+} ?>
                   </p>
                 </a>
               </li>
@@ -259,29 +274,29 @@
               面接は企業が応募者に対して採用を判断するだけでなく、応募者にとっても入社する企業を見極めるための重要な場です。面接は制限時間が指定される場合もあり、その中で自分の良さを伝えなければなりません。実際の面接では短い時間での発言を求められるので、アピールするためのコツが必要です。効果的にアピールできるよう、世代別でのPRポイントやNGポイントをご紹介していきます。好印象を与える事ができる面接ノウハウについて学んでみましょう。
             </div>
           </div>
-<!--
-          <h3 class="knowhow-post__title">自己紹介でよくある質問</h3>
-          <div class="knowhow-post__question">
-            <h4>「自己紹介をお願いします。」</h4>
-            <p>
-              先に自由な自己紹介を求められる場合も多くあります。<br>
-              この時、企業の担当者が知りたい事はなんでしょうか？<br>
-              応募者の第一印象やコミニケーション能力、自社で活躍するイメージも見ています。<br><br>
-              企業で生かせるあなた自身の職務経験を簡潔に答えられるようにしておきましょう。<br>
-              ・氏名<br>
-              ・職務経歴<br>
-              ・応募企業で活かせるポイント<br>
-            </p>
-          </div>
-          <div class="knowhow-post__answer">
-            <h4>【回答例】</h4>
-            <p>
-              ダミーです。（他社サイトから引用しています）<br>
-              毎日太郎と申します。<br>
-              前職では、飲料メーカーのマーケティング職としてキャンペーンの企画やランディングページのディレクションに携わってまいりました。「◯◯キャンペーン」では前年比120％の応募数を獲得し、社内表彰を受賞しました。<br>
-              今後は、自社のマーケティングだけでなく、幅広い業種のマーケティングに挑戦していきたいと思い、キャンペーン企画を強みに多様な企業をクライアントとして持つ御社に応募させていただきました。本日はどうぞよろしくお願いいたします。
-            </p>
-          </div>
+          <!--
+<h3 class="knowhow-post__title">自己紹介でよくある質問</h3>
+<div class="knowhow-post__question">
+<h4>「自己紹介をお願いします。」</h4>
+<p>
+先に自由な自己紹介を求められる場合も多くあります。<br>
+この時、企業の担当者が知りたい事はなんでしょうか？<br>
+応募者の第一印象やコミニケーション能力、自社で活躍するイメージも見ています。<br><br>
+企業で生かせるあなた自身の職務経験を簡潔に答えられるようにしておきましょう。<br>
+・氏名<br>
+・職務経歴<br>
+・応募企業で活かせるポイント<br>
+</p>
+</div>
+<div class="knowhow-post__answer">
+<h4>【回答例】</h4>
+<p>
+ダミーです。（他社サイトから引用しています）<br>
+毎日太郎と申します。<br>
+前職では、飲料メーカーのマーケティング職としてキャンペーンの企画やランディングページのディレクションに携わってまいりました。「◯◯キャンペーン」では前年比120％の応募数を獲得し、社内表彰を受賞しました。<br>
+今後は、自社のマーケティングだけでなく、幅広い業種のマーケティングに挑戦していきたいと思い、キャンペーン企画を強みに多様な企業をクライアントとして持つ御社に応募させていただきました。本日はどうぞよろしくお願いいたします。
+</p>
+</div>
 -->
           <div class="c-knowhow-blog">
             <ul class="knowhow-blog-list">
@@ -302,7 +317,7 @@
               <li class="knowhow-blog-list__item">
                 <a href="<?php the_permalink(); ?>">
                   <figure class="thumb">
-                    <?php
+                    <?php 
                     $image = get_field('blog_thumbnail');
                     $size = 'blog_thumb';
                     if( $image ) {
@@ -313,11 +328,11 @@
                   <p class="title">
                     <time class="time"><span><?php the_time('Y年n月j日'); ?></span></time>
                     <?php if(mb_strlen($post->post_title, 'UTF-8')>30){
-                      $title= mb_substr($post->post_title, 0, 30, 'UTF-8');
-                      echo $title.'...';
-                    }else{
-                      echo $post->post_title;
-                    } ?>
+  $title= mb_substr($post->post_title, 0, 30, 'UTF-8');
+  echo $title.'...';
+}else{
+  echo $post->post_title;
+} ?>
                   </p>
                 </a>
               </li>
@@ -344,7 +359,7 @@
             ライバルよりも少しいいものを目指すのではなく、世の中が思いつかない圧倒的に凄いものをつくることが重要なのだと。<br class="u-lg-max">
             ライフラインでは偉大なスティーブ・ジョブズからヒントをもらい、<br class="u-lg-max">
             これまでにない来店型の民間版ハローワークとなるスピードジョブズを立ち上げました。<br class="u-lg-max">
-              私たちは今後も人材と企業を結ぶ次世代型ソリューションとして、多くの方々の“生命線”として歩み続けます。
+            私たちは今後も人材と企業を結ぶ次世代型ソリューションとして、多くの方々の“生命線”として歩み続けます。
           </p>
         </div>
       </div>
@@ -387,7 +402,7 @@
                   〒921-8801<br>
                   石川県野々市市御経塚二丁目91番地<br>2階210−03区画<br>
                   <a href="tel:0762595190">TEL：076-259-5190</a><br>
-                    FAX：076-259-5191<br>
+                  FAX：076-259-5191<br>
                 </p>
               </div>
             </div>
@@ -422,14 +437,15 @@
             <h2 class="heading">公式Facebook</h2>
           </div>
           <div class="fb-banner"><a href="https://www.facebook.com/ishikawarecruit/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/lifeline-fb_banner.jpg" alt=""></a></div>
-<!--
-          <div class="info-sns__fb">
-            <div class="fb-page" data-href="https://www.facebook.com/ishikawarecruit/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ishikawarecruit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ishikawarecruit/">ライフライン</a></blockquote></div>
-          </div>
+          <!--
+<div class="info-sns__fb">
+<div class="fb-page" data-href="https://www.facebook.com/ishikawarecruit/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ishikawarecruit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ishikawarecruit/">ライフライン</a></blockquote></div>
+</div>
 -->
         </div>
       </div>
     </section>
   </div>
 </main>
+
 <?php get_footer(); ?>

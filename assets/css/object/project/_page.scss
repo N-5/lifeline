@@ -90,6 +90,7 @@
           transition: .24s ease all;
           @include media(sm) {
             width: 32%;
+            overflow: hidden;
           }
           &:last-child {
             margin-bottom: 0;

@@ -4,9 +4,8 @@
     <div class="sidebar_list">
       <p class="heading">おすすめ</p>
       <ul class="sidebar__item">
-        <li><a href="<?php echo home_url(); ?>/cat_recruit_way/new/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item2.jpg" alt="新着求人をチェック！"></a></li>
-        <li><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item4.jpg" alt="正社員求人をチェック！"></a></li>
-        <li><a href="<?php echo home_url(); ?>/cat_blog/feature_recruit/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item6.jpg" alt="ピックアップ求人情報"></a></li>
+        <li><a href="<?php echo home_url(); ?>/permanent-staff/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item8.jpg" alt="正社員はこちら"></a</li>
+        <li><a href="<?php echo home_url(); ?>/temporary-staff/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/index/banner-banner-item9.jpg" alt="派遣社員はこちら"></a></li>
       </ul>
     </div>
     <div class="sidebar_list">

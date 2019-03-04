@@ -6,7 +6,7 @@ function remove_admin_menu() {
   remove_menu_page('edit.php');
   remove_menu_page('edit-comments.php');
   remove_menu_page('themes.php');
-//  remove_menu_page( 'plugins.php' );
+  remove_menu_page( 'plugins.php' );
   remove_menu_page( 'users.php' ); 
   //  remove_menu_page( 'options-general.php' );
 }
@@ -41,15 +41,19 @@ add_action('admin_menu', 'remove_admin_menu');
   }
   add_filter('wp_title', 'my_title_fix', 10, 3);
 
-  // wp_head内のjQuery除去
-  function my_delete_local_jquery() {
-      wp_deregister_script('jquery');
-  }
-  add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
+//remove wp jquery
+function my_delete_local_jquery() {
+  wp_deregister_script('jquery');
+}
+add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
+
+//remove Emojis
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
   
-  // AIOSEO <link rel="prev/next">削除
-  add_filter('aioseop_prev_link', '__return_empty_string' );
-  add_filter('aioseop_next_link', '__return_empty_string' );
+// AIOSEO <link rel="prev/next">削除
+add_filter('aioseop_prev_link', '__return_empty_string' );
+add_filter('aioseop_next_link', '__return_empty_string' );
 
 
 

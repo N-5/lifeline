@@ -1,4 +1,27 @@
 <?php get_header(); ?>
+<!-- Google For Jobs-->
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org/",
+    "@type" : "JobPosting",
+    "title" : "<?php the_title() ?>",
+    "description" : "<p><?php the_field('recruit_info03'); ?></p>",
+    "datePosted" : "<?php echo date("Y-m-d"); ?>",
+    "validThrough" : "<?php echo date("Y/m/d",strtotime("+3 week")); ?>",
+    "hiringOrganization" : {
+        "@type" : "Organization",
+        "name" : "<?php the_field('recruit_corp01'); ?>"
+    },
+    "jobLocation" : {
+        "@type" : "Place",
+        "address" : {
+            "@type" : "PostalAddress",
+            "addressRegion" : "<?php the_field('recruit_info06'); ?>",
+            "addressCountry": "JP"
+        }
+    }
+}
+</script>
 <main>
   <div id="recruitSingle" class="main">
     <div class="recruitSingle_inner">
@@ -55,7 +78,7 @@
                   </div>
 <!--
                   <figure class="entry__thumbnail">
-                    <?php 
+                    <?php
                     $image = get_field('recruit_info00');
                     $size = 'large';
                     if( $image ) {
@@ -183,7 +206,7 @@
         </div>
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit">求人情報一覧</a></div>
       </div>
-      
+
       <div class="recruitSignle_related">
         <p class="sub">＼ 他にもおすすめ求人多数！ ／</p>
         <h4 class="title">この求人を見た人は<br>こちらの求人もおすすめです</h4>

@@ -2,12 +2,12 @@
 <main>
   <div id="permanent-staff" class="main">
     <div class="c-headingLarge">
-      <h2 class="heading">正社員</h2>
+      <h2 class="heading"><!-- 正社員  --></h2>
     </div>
     <div class="c-container">
       <section class="lp-lead">
         <div class="c-section-title_lp">
-          <h2 class="heading"><span>人材派遣のしくみ・派遣社員のメリット</span></h2>
+          <h2 class="heading"><span>人材紹介のしくみ</span></h2>
         </div>
         <div class="lp-lead-top">
           <div class="lp-lead-top__detail">
@@ -20,7 +20,7 @@
           <figure class="lp-lead-under__image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/permanent-staff/lead-under.jpg" alt=""></figure>
           <div class="lp-lead-under__detail">
             <h3 class="heading">人材紹介のメリット</h3>
-            <p class="c-text">人材紹介サービスとは、職業紹介事業を行う事業者（ライフライン）が企業の求人依頼を受けて、それに該当する人材（転職希望者）を企業へ紹介するサービスです。</p>
+            <p class="c-text">専任のコーディネーターが細やかにカウンセリングするので、転職後のビジョンやどんなキャリアを得たいかを明確にできます。最適な求人案件を紹介して、転職に関するさまざまなコンサルティングや、面接の日程や雇用条件の交渉などのサービスを無料で受けることができます。在職中でも無理なく効率的に転職活動を行うことができます。</p>
           </div>
         </div>
       </section>
@@ -162,7 +162,7 @@
     <section class="lp-form">
       <div class="c-container">
         <div class="c-section-title">
-          <h1 class="heading">来社予約・転職相談</h1>
+          <h1 class="heading">ご登録・転職相談</h1>
           <p class="lead">弊社は、事業運営上必要なお客様や従業者の個人情報の取扱いにあたって、<br>以下の方針を定め、個人情報管理体制を確立し、企業として責任ある対応を実現するものとします。</p>
         </div>
         <div class="c-contact__content">

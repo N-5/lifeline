@@ -742,31 +742,36 @@ c-fixlist
         color: #fff;
         padding: 16px 0;
         font-weight: bold;
-      }
-      &:nth-child(1) {
-        background: $color-orange;
-        &:before {
-          position: absolute;
-          top: 14px;
-          left: 34px;
-          content: '\f040';
-          margin-right: 6px;
-          font-size: 18px;
-          font-family: FontAwesome;
-          color: #fff;
+        span {
+          position: relative;
         }
       }
-      &:nth-child(2) {
+      &.entry {
+        background: $color-orange;
+        span {
+          &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: '\f040';
+            margin-right: 6px;
+            font-size: 18px;
+            font-family: FontAwesome;
+            color: #fff;
+          }
+        }
+      }
+      &.tel {
         background: $color-main;
-        &:before {
-          position: absolute;
-          top: 14px;
-          left: 28px;
-          content: '\f095';
-          margin-right: 6px;
-          font-size: 18px;
-          font-family: FontAwesome;
-          color: #fff;
+        span {
+          &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: '\f095';
+            margin-right: 6px;
+            font-size: 18px;
+            font-family: FontAwesome;
+            color: #fff;
+          }
         }
       }
       .shop-list {
@@ -1142,8 +1147,16 @@ c-popup
           margin-bottom: 20px;
         }
         .time {
-          .form-month {
+          .form-month,
+          .form-date {
             margin-right: 10px;
+          }
+        }
+        .caution {
+          margin-top: 20px;
+          font-size: 10px;
+          @include media(sm) {
+            font-size: 12px;
           }
         }
       }
