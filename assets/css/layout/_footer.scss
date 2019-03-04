@@ -3,7 +3,7 @@
 .footer {
   background: #EAEAE8;
   .footer-inner {
-    padding: 40px 5%;
+    padding: 40px 5% 70px;
     @include media(md) {
       padding: 40px 0;
     }
