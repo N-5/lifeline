@@ -293,16 +293,12 @@ c-recuritList
         }
         .recruitList-head__thumbnail {
           width: 80px;
-          height: 80px;
           margin-right: 5%;
-          background: url(assets/images/common/noimage.jpg) no-repeat center/cover;
           @include media(sm) {
             width: 100px;
-            height: 100px;
           }
           @include media(md) {
             width: 120px;
-            height: 120px;
           }
         }
         .recruitList-head__heading {

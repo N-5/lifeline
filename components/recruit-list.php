@@ -49,14 +49,19 @@
     </div>
     <div class="recruitList-head">
       <a href="<?php the_permalink(); ?>">
-      <figure class="recruitList-head__thumbnail">
+      <figure class="recruitList-head__thumbnail">    
+        <?php if(get_field('recruit_info00',$post_id)): ?>
         <?php 
         $image = get_field('recruit_info00');
         $size = 'custom_size';
+
         if( $image ) {
           echo wp_get_attachment_image( $image, $size );
         }
-        ?>
+        ?> 
+        <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" alt="">
+        <?php endif; ?>
       </figure>
       <p class="recruitList-head__heading">
         <?php if(mb_strlen($post->post_title, 'UTF-8')>30){

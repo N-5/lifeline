@@ -1,27 +1,44 @@
 <?php get_header(); ?>
 <!-- Google For Jobs-->
-<script type="application/ld+json">
-{
-    "@context" : "http://schema.org/",
-    "@type" : "JobPosting",
-    "title" : "<?php the_title() ?>",
-    "description" : "<p><?php the_field('recruit_info03'); ?></p>",
-    "datePosted" : "<?php echo date("Y-m-d"); ?>",
-    "validThrough" : "<?php echo date("Y/m/d",strtotime("+3 week")); ?>",
+<script type="application/ld+json"> {
+    "@context": "http://schema.org/",
+    "@type": "JobPosting",
+    "title": "<?php the_field('recruit-google-title'); ?>",
+    "description": "<?php the_field('recruit-google-lead'); ?>",
+    "datePosted": "<?php $date = date_create(get_field('recruit-google-startday')); echo date_format($date,'Y-m-d'); ?>",
+    "validThrough": "<?php $date = date_create(get_field('recruit-google-enday')); echo date_format($date,'Y-m-d'); ?>",
+    "employmentType": "<?php the_field('recruit-google-hire'); ?>",
     "hiringOrganization" : {
-        "@type" : "Organization",
-        "name" : "<?php the_field('recruit_corp01'); ?>"
+        "@type": "Organization",
+        "name": "<?php the_field('recruit-google-name'); ?>",
+        "sameAs": "https://lifeline-lg.com/",
+        "logo": "https://lifeline-lg.com/image/lifeline.jpg"
     },
-    "jobLocation" : {
-        "@type" : "Place",
-        "address" : {
-            "@type" : "PostalAddress",
-            "addressRegion" : "<?php the_field('recruit_info06'); ?>",
+    "jobLocation": {
+        "@type": "Place",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "<?php the_field('recruit-google-prefecture'); ?>",
+            "addressLocality": "<?php the_field('recruit-google-city'); ?>",
+            "streetAddress": "<?php the_field('recruit-google-address'); ?>",
+            "postalCode": "<?php the_field('recruit-google-zip'); ?>",
             "addressCountry": "JP"
+        }
+    },
+    "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "JPY",
+        "value": {
+            "@type": "QuantitativeValue",
+            "value": <?php the_field('recruit-google-basevalue'); ?>,
+            "minValue": <?php the_field('recruit-google-minvalue'); ?>,
+            "maxValue": <?php the_field('recruit-google-maxvalue'); ?>,
+            "unitText": "<?php the_field('recruit-google-unitText'); ?>"
         }
     }
 }
 </script>
+
 <main>
   <div id="recruitSingle" class="main">
     <div class="recruitSingle_inner">
@@ -159,7 +176,7 @@
               </div>
               <h3 class="title">企業情報</h3>
               <div class="entry__table">
-                <?php if( get_field('recruit_info11') ) { ?>
+                <?php if( get_field('recruit_corp01') ) { ?>
                 <dl>
                   <dt>企業名</dt>
                   <dd><?php the_field('recruit_corp01'); ?></dd>

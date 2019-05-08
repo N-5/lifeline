@@ -133,6 +133,7 @@
           .feature-banner-item {
             width: 100%;
             margin-bottom: 4px;
+            border: 1px solid #dfeef7;
             overflow: hidden;
             background-size: cover;
             transition: .24s ease all;
@@ -146,6 +147,8 @@
             a {
               display: block;
               position: relative;
+              height: 100%;
+              background-color: rgba(255,255,255,0.4);
               .heading {
                 position: relative;
                 padding: 60px 15px 15px;
@@ -163,6 +166,7 @@
                   display: block;
                   margin-top: 6px;
                   font-size: 12px;
+                  font-weight: bold;
                   font-weight: normal;
                   br {
                     display: none;

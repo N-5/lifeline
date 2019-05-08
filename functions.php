@@ -3,14 +3,33 @@
 
 // Hide useless admin menu
 function remove_admin_menu() {
-  remove_menu_page('edit.php');
-  remove_menu_page('edit-comments.php');
-  remove_menu_page('themes.php');
-  remove_menu_page( 'plugins.php' );
-  remove_menu_page( 'users.php' ); 
-  //  remove_menu_page( 'options-general.php' );
+//  remove_menu_page('edit.php');
+//  remove_menu_page('edit-comments.php');
+//  remove_menu_page('themes.php');
+//  remove_menu_page( 'plugins.php' );
+//  remove_menu_page( 'users.php' );
+//  remove_menu_page( 'options-general.php' );
 }
 add_action('admin_menu', 'remove_admin_menu');
+
+function update_nag_hide() {
+  remove_action( 'admin_notices', 'update_nag', 3 );
+}
+add_action( 'admin_init', 'update_nag_hide' );
+
+
+function custom_post_title( $value, $post_id, $field  )
+{
+  if(isset($value) && $value != '') {
+    $args = array(
+      'ID'           => $post_id,
+      'post_name' => sanitize_title($value)
+    );
+    wp_update_post( $args );
+  } 
+  return $value;
+}
+add_filter('acf/update_value/name=number', 'custom_post_title', 10, 3);
 
 
   // show_countをaタグ内に表示
@@ -49,8 +68,8 @@ add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
 
 //remove Emojis
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
-  
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
 // AIOSEO <link rel="prev/next">削除
 add_filter('aioseop_prev_link', '__return_empty_string' );
 add_filter('aioseop_next_link', '__return_empty_string' );

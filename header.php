@@ -12,6 +12,46 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/barba.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/script-min.js"></script>
+<script type="application/ld+json">
+{ 
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "http://lifeline-lg.com",
+  "logo": "https://lifeline-lg.com/image/lifeline.jpg"
+} 
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://lifeline-lg.com/",
+  "name": "ライフライン",
+  "publisher": {
+      "@type": "Organization",
+      "name": "株式会社ライフライン",
+      "url": "https://lifeline-lg.com/",
+      "logo": {
+          "@type": "ImageObject",
+          "url": "https://lifeline-lg.com/image/lifeline.jpg",
+          "width": 112,
+          "height": 112
+      },
+      "address": {
+          "@type": "PostalAddress",
+          "postalCode": "921-8013",
+          "addressRegion": "石川県",
+          "addressLocality": "金沢市",
+          "streetAddress": "新神田2丁目14番21号"
+      }
+  },
+  "image": {
+      "@type": "ImageObject",
+      "url": "https://lifeline-lg.com/image/lifeline.jpg",
+      "width": 112,
+      "height": 112
+  }
+}
+</script>
 <!-- wp_head -->
 <?php wp_head(); ?>
 <!-- ie -->
@@ -95,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div <?php body_class(); ?>>
     <?php if ( !is_home() && !is_front_page() ) : ?>
     <div class="c-breadcrumbs">
-      <div class="c-container" typeof="BreadcrumbList" vocab="http://schema.org/">
+      <div class="c-container">
         <?php if(function_exists('bcn_display')) { bcn_display(); }?>
       </div>
     </div>

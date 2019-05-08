@@ -74,6 +74,34 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit/">求人情報一覧</a></div>
       </div>
     </section>
+    <section id="recommend" class="recommend">
+      <div class="recommend-inner c-container">
+        <div class="c-section-title">
+          <h2 class="heading">【開発】ダミー高校生求人</h2>
+          <p class="lead">ダミー石川県・福井県・富山県の<br class="u-sp">新着おすすめ求人を随時更新！</p>
+        </div>
+        <div class="c-recruitList">
+          <?php
+          $loop = new WP_Query (array(
+            'post_type'			=> 'recruit',
+            'posts_per_page'	=> 6,
+            'relation' => 'AND',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cat_recruit_way',
+                'field'    => 'slug',
+                'terms'    => 'jobri',
+              ),
+            ),
+          ));
+          while ($loop -> have_posts()) : $loop -> the_post();
+          ?>
+          <?php get_template_part('components/recruit-list'); ?>
+          <?php endwhile; ?>
+        </div>
+        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit/">求人情報一覧</a></div>
+      </div>
+    </section>
     <section id="recruitfeature" class="feature">
       <div class="feature-inner c-container">
         <div class="c-section-title">
@@ -121,8 +149,9 @@
     <section id="companyfeature" class="feature">
       <div class="feature-inner c-container">
         <div class="c-section-title">
-          <h2 class="heading">企業特集</h2>
-          <p class="lead">このコーナーでは、ライフラインがおすすめする、石川県・福井県で今一番の注目企業のお仕事情報をインタビュー形式で一挙掲載。<br>地元の成長企業や大手企業、外資系企業など、あなたにぴったりのお仕事を見つけてください。</p>
+          <h2 class="heading">ブログ・雑感</h2>
+          <p class="lead">このコーナーでは、ライフラインからのお知らせや最新情報、転職活動に役立つ情報を発信していきます。<br>
+            イベント情報やセミナー開催もご紹介しますので是非チェックしてみて下さい。</p>
         </div>
         <div class="feature-banner">
           <ul class="feature-banner-list">
