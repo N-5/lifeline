@@ -48,7 +48,8 @@ add_filter('acf/update_value/name=number', 'custom_post_title', 10, 3);
   if ( function_exists( 'add_image_size' ) ) {
   	add_image_size( 'custom_size',134,134, true );
   	add_image_size( 'custom_size_detail', 300, 300, true );
-	 add_image_size( 'blog_thumb', 240, 148, true );
+  	add_image_size( 'jobri-thunb', 400, 400, true );
+	add_image_size( 'blog_thumb', 240, 148, true );
   }
 
   // wp_titleの半角除去

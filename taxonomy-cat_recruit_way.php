@@ -31,7 +31,13 @@
     <div class="c-container">
       <div class="c-recruitList">
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-          <?php get_template_part('components/recruit-list'); ?>
+          
+        <?php if ( is_object_in_term($post->ID, 'cat_recruit_way','jobri') ): ?>
+        <?php get_template_part('components/recruit-jobri-list'); ?>
+        <?php else: ?>
+        <?php get_template_part('components/recruit-list'); ?>
+        <?php endif; ?>
+          
         <?php endwhile; ?>
         <div class="c-pager">
           <?php global $wp_rewrite;

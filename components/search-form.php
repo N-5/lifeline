@@ -12,6 +12,7 @@
         <input type="text" name="s" id="s" placeholder="どんなお仕事をお探しですか？" />
       </div>
     </div>
+
     <div class="searchform-list item">
       <div class="title name">勤務地</div>
       <div class="form">
@@ -33,6 +34,7 @@
         </select>
       </div>
     </div>
+
     <div class="searchform-list item">
       <div class="title name">職種</div>
       <div class="form">

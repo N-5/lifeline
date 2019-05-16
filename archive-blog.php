@@ -6,6 +6,7 @@
       <p class="text">このコーナーでは、求人 転職のプロであるライフラインが様々な視点でピックアップした求人情報・企業情報を特集としてまとめています。<br>
         会社の社風・環境や職種・働き方などでまとめているので新しい視点であなたにあった求人が見つかるかも。</p>
     </div>
+
     <div class="c-container">
       <div class="entryWrap">
         <ul>
@@ -51,15 +52,12 @@
               'mid_size' => 5,
               'current' => ($paged ? $paged : 1),
          )); ?>
-         </div><!-- /.pager -->   
+         </div>
       </div><!-- /.entryWrap -->
       <?php get_sidebar('blog'); ?>
     </div><!-- /.container -->
   </div>
 </main>
 <?php get_footer(); ?>
-
-
-<?php if(is_month()): ?> - <?php echo get_the_archive_title(); ?><?php endif; ?>
 
 

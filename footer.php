@@ -1,4 +1,3 @@
-<?php ?>
 <div class="c-fixlist">
   <ul class="fixlist">
     <li class="tel">

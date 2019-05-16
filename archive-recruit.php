@@ -7,11 +7,33 @@
       「自分のライフスタイルに合わせて働きたい」「正社員で働きたい」「今までの経験を活かしたい」など<br>
       自分に合った働き方から探すことができます。</p>
     </div>
+
     <div class="c-container">
       <div class="c-recruitList">
-        <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+        <?php
+        $loop = new WP_Query (array(
+          'post_type'			=> 'recruit',
+          'posts_per_page'	=> 10,
+          'relation' => 'AND',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'cat_recruit_way',
+              'field'    => 'slug',
+              'terms'    => 'new',
+            ),
+          ),
+        ));
+        while ($loop -> have_posts()) : $loop -> the_post();
+        ?>
+        
+        <?php if ( is_object_in_term($post->ID, 'cat_recruit_way','jobri') ): ?>
+        <?php get_template_part('components/recruit-jobri-list'); ?>
+        <?php else: ?>
         <?php get_template_part('components/recruit-list'); ?>
+        <?php endif; ?>
+        
         <?php endwhile; ?>
+        
         <div class="c-pager">
           <?php global $wp_rewrite;
           $paginate_base = get_pagenum_link(1);

@@ -127,23 +127,7 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
   for(var i = 0; i < newHeadTags.length; i++ ){
     head.appendChild(newHeadTags[i]);
   }
-  
-  // あと読みのjsファイルの実行
-  var js = container.getElementsByTagName("script");
-  if(js != null){
-    var jsCount = js.length;
-    for(var i = 0; i < jsCount; i+=1){
-      if(js[i].src !== ''){
-        var addJs = document.createElement("script");
 
-        addJs.src = js[i].src;
-        document.body.appendChild(addJs);
-
-      }else{
-        eval(js[i].innerHTML);
-      }
-    }
-  }
   
   return false;
 });

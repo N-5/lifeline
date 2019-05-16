@@ -24,6 +24,7 @@
       </select>
     </div>
   </div>
+
   <div class="searchform-list">
     <div class="name">職種</div>
     <div class="form">

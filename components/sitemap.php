@@ -5,24 +5,6 @@
 <div class="footer-inner c-container">
   <div class="footer-nav">
     <h3 class="heading">求人情報<span>RECRUIT</span></h3>
-<!--
-    <div class="area">
-      <div class="area-item">
-        <div class="footer-nav-list">
-          <ul class="footer-nav-list__item item-col2">
-            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/new/">新着求人</a></li>
-            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/">正社員求人</a></li>
-            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/dispatch/">派遣求人</a></li>
-          </ul>
-          <ul class="footer-nav-list__item item-col2">
-            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/new/">パートタイム求人</a></li>
-            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/regular/">Wワーク求人</a></li>
-            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/dispatch/">高収入求人</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
--->
     <div class="footer-nav-list">
       <div class="area">
         <div class="area-item">
@@ -39,7 +21,13 @@
             <li><a href="<?php echo home_url(); ?>/cat_recruit_way/highincome/">高収入求人</a></li>
           </ul>
         </div>
+        <div class="area-item">
+          <ul class="footer-nav-list__item item-col1">
+            <li><a href="<?php echo home_url(); ?>/cat_recruit_way/jobri/">高校生求人</a></li>
+          </ul>
+        </div>
       </div>
+
       <div class="area">
         <div class="area-item">
           <h4 class="name">地域別で求人をさがす</h4>
@@ -65,6 +53,7 @@
           </ul>
         </div>
       </div>
+
       <div class="work">
         <h4 class="name">職種別で求人をさがす</h4>
         <div class="work-item">
@@ -91,6 +80,7 @@
           </ul>
         </div>
       </div>
+
       <div class="pickup">
         <h4 class="name">求人特集からさがす</h4>
         <div class="pickup-item">
@@ -99,6 +89,7 @@
           </ul>
         </div>
       </div>
+
       <div class="feature">
         <h4 class="name">企業特集からさがす</h4>
         <div class="feature-item">
@@ -107,6 +98,7 @@
           </ul>
         </div>
       </div>
+
       <div class="about">
         <h3 class="heading">ライフラインについて<span>LIFE LINE</span></h3>
         <div class="about-item">
@@ -124,6 +116,7 @@
           </ul>
         </div>
       </div>
+
       <div class="menu">
         <h3 class="heading">サイトメニュー<span>MENU</span></h3>
         <div class="menu-item">
@@ -136,6 +129,7 @@
         </div>
       </div>
     </div>
+
     <div class="footer-information">
       <div class="information-link"><a href="<?php echo home_url(); ?>/client/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer-infomationlink.jpg" alt="求人掲載をご希望の企業様へ"></a></div>
       <div class="information-text">
@@ -148,6 +142,7 @@
           TEL.076-291-8001 FAX.076-291-8010
         </p>
       </div>
+    
     </div>
     <div class="footer-copyright">
       <div class="logo"><a href="https://lifeholdings-lg.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/footer-logo.png" alt="LIFE LINE GROUP"></a></div>

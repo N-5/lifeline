@@ -13,6 +13,7 @@
         <?php get_template_part('components/search-form'); ?>
       </div>
     </section>
+
     <section class="banner">
       <div class="banner-inner c-container">
         <div class="banner-list">
@@ -44,6 +45,7 @@
         </div>
       </div>
     </section>
+
     <section class="anchor c-anchor">
       <div class="anchor-inner">
         <ul class="anchor-list">
@@ -54,6 +56,7 @@
         </ul>
       </div>
     </section>
+
     <section id="recommend" class="recommend">
       <div class="recommend-inner c-container">
         <div class="c-section-title">
@@ -64,7 +67,15 @@
           <?php
           $loop = new WP_Query (array(
             'post_type'			=> 'recruit',
-            'posts_per_page'	=> 6
+            'posts_per_page'	=> 6,
+            'relation' => 'AND',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cat_recruit_way',
+                'field'    => 'slug',
+                'terms'    => 'new',
+              ),
+            ),
           ));
           while ($loop -> have_posts()) : $loop -> the_post();
           ?>
@@ -74,11 +85,17 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit/">求人情報一覧</a></div>
       </div>
     </section>
-    <section id="recommend" class="recommend">
-      <div class="recommend-inner c-container">
+
+    <?php if( is_user_logged_in() ) : ?>
+    <section id="jobri" class="jobri">
+      <div class="jobri-inner c-container">
         <div class="c-section-title">
-          <h2 class="heading">【開発】ダミー高校生求人</h2>
-          <p class="lead">ダミー石川県・福井県・富山県の<br class="u-sp">新着おすすめ求人を随時更新！</p>
+          <h2 class="heading">高校生採用特集</h2>
+          <p class="lead">
+            石川県、福井県内のおすすめ新卒求人をご紹介しています。<br class="u-md-max">
+            幅広い職種・業界、地域別にピックアップ！<br class="u-md-max">
+            実際に働く先輩社員に、仕事内容や職場環境をインタビューしていますので、是非チェックしてみてください。
+          </p>
         </div>
         <div class="c-recruitList">
           <?php
@@ -96,12 +113,14 @@
           ));
           while ($loop -> have_posts()) : $loop -> the_post();
           ?>
-          <?php get_template_part('components/recruit-list'); ?>
+          <?php get_template_part('components/recruit-jobri-list'); ?>
           <?php endwhile; ?>
         </div>
-        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/recruit/">求人情報一覧</a></div>
+        <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_recruit_way/jobri/">高校生求人情報一覧</a></div>
       </div>
     </section>
+    <?php endif; ?>
+
     <section id="recruitfeature" class="feature">
       <div class="feature-inner c-container">
         <div class="c-section-title">
@@ -146,6 +165,7 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_blog/feature_recruit/">ピックアップ求人情報</a></div>
       </div>
     </section>
+
     <section id="companyfeature" class="feature">
       <div class="feature-inner c-container">
         <div class="c-section-title">
@@ -191,6 +211,7 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_blog/feature-company/">企業特集一覧</a></div>
       </div>
     </section>
+
     <section id="knowhow" class="knowhow">
       <div class="c-section-title">
         <h2 class="heading">プロが教える転職成功ノウハウ</h2>
@@ -361,6 +382,7 @@
         <div class="c-button button-type-list"><a href="<?php echo home_url(); ?>/cat_blog/interview/">面接対策に関する記事一覧</a></div>
       </div>
     </section>
+
     <section id="about" class="about">
       <div class="about-inner c-container">
         <div class="c-section-title">
@@ -378,6 +400,7 @@
         </div>
       </div>
     </section>
+
     <section id="info" class="info">
       <div class="info-inner c-container">
         <div class="info-company">

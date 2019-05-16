@@ -213,6 +213,7 @@ c-recuritList
   justify-content: space-between;
   margin-bottom: 30px;
   .recruitList-item {
+    width: 100%;
     margin-bottom: 30px;
     border: 1px solid #ddd;
     border-top: 3px solid $color-main;
@@ -360,6 +361,12 @@ c-recuritList
                 margin-right: 10px;
               }
             }
+            &.time {
+              &:before {
+                content: '\f017';
+                margin-right: 10px;
+              }
+            }
             &.check {
               &:before {
                 content: '\f046';
@@ -381,6 +388,9 @@ c-recuritList
           }
         }
       }
+    }
+    &.jobri-item {
+      border-top: 3px solid #f29600;
     }
   }
 }
